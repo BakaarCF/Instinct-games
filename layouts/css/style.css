@@ -6,7 +6,8 @@
   
 }
 
-body {
+body { 
+  
   background-color: #1b1b1b;
   color: white;
   box-sizing: border-box;
@@ -25,7 +26,7 @@ header{
   padding: 30px 10px;
   height: 100px;
   background-color: black;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 .logo{
   cursor:pointer;
@@ -57,6 +58,20 @@ nav{
 }
 .nav_links li a:hover{
   color: #30593D;
+   
+}
+.nav_links li a:after {
+  content: "";
+  position: absolute;
+  text-decoration: #30593D;
+  height: 10px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+.nav_links li a:hover:after {
+  width: 100%;
 }
 .button{
   padding: 9px 25px;
@@ -99,10 +114,13 @@ background-color: #30593D;
 .slider .slide-img img {
   width: 100%;
   height: 100%;
+  margin: 0;
   object-fit: cover;
   z-index: 10;
 }
-
+.space{
+  height: 50px;
+}
 .buttonn {
   z-index: 12;
   width: 60px;
@@ -238,4 +256,39 @@ margin-top: 39px;
 
 .uploadbutton {
   margin-top: 50%;
+}
+.mailicon{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin: 0 auto;
+  font-size:50px;
+  text-shadow: 0 0 15px white;
+}
+.form{
+
+}
+.formm{
+
+}
+.gameinfo ul li{
+  color: #6c6c6c;
+    font-size: 14px;
+    display: block;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e6e5e4;
+    margin-bottom: 16px;
+}
+.gameinfo ul li span{
+  font-size: 16px;
+    font-weight: 600;
+    color: #30593D;
+    margin-right: 40px;
+}
+.grid{
+  margin: 0 auto;
+  margin-left: 1450px;
+  margin-top: 20px;
+  vertical-align: middle;
 }
