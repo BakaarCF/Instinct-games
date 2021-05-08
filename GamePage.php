@@ -56,17 +56,24 @@ There are currently 176 creatures that populate the world of Ark. In the early v
     <td><img src="layouts/img/1.jpg" height="200px" width="200px"/></td>
 </tr>
 </table>
-
-
-
 </div>
-    
-    
-    
-    
-    
-    
-    
+<div class="overview-history" style="margin-top:-200px;">
+<ul>
+<li>
+<div class="overview-history-videoo">
+    <a href="https://www.youtube.com/watch?v=5fIAPcVdZO8"><img src="layouts/img/8.jpg" style="vertical-align: middle;
+  border-style: none;"></a> 
+</div>
+<div class="overview-history-content">
+   
+    <h4>
+        <a href="#">CONSOLE UPDATE</a>
+    </h4>
+    <span>1st place November 9, 2020</span>
+</div>
+</li>
+</ul>
+</div> 
     <?php include("includes/footer.php");
     ?>
 </body>
