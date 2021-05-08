@@ -1,14 +1,16 @@
 
     <header>
         <div class="logo">
+        <a href="index.php">
             <img class="" src="images/Bakaar.png" alt="logo">
+            </a>
         </div>
         <nav>
             <ul class="nav_links">
-                <li><a href="#">HOME</a></li>
+                <li><a href="index.php">HOME</a></li>
                 <li><a href="#">NEWS</a></li>
-                <li><a href="#">PROFILE</a></li>
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="profile.php">PROFILE</a></li>
+                <li><a href="Aboutus.php">ABOUT</a></li>
                 <li><a href="#">GAMES</a></li>
                 <li><a href="#">JOBS</a></li>
                 <li><a href="#">CONTACT US</a></li>
