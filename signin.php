@@ -1,3 +1,36 @@
+<?php  session_start();?> 
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "instinct_games";
+
+if(isset($_POST['signin']))
+{
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+  $uname=$_POST['user_name'];
+  $pass=$_POST['password'];
+  $sql = "SELECT * FROM users WHERE user_name = '$uname' AND PASSWORD = '$pass'";
+    $result = mysqli_query($conn, $sql);
+    if (mysqli_num_rows($result) == 1) 
+    {
+      
+      $row = mysqli_fetch_assoc($result);
+
+      if ($row['user_name'] == $uname && $row['PASSWORD'] == $pass)
+      {
+        $_SESSION['user_name'] = $row['user_name'];
+        header("Location:home2.php");
+      }
+      else
+      {
+           echo "error";
+      }
+    }
+  }
+?>
 <html>
   <head>
     
@@ -11,7 +44,7 @@
     <title>Sign in & Sign up Form</title>
   </head>
 <style>
-  body {background-color:black;}
+  body 
   
   .leftdiv{
     background-color :white;
@@ -73,26 +106,7 @@ body, input {
   z-index: 5;
 }
 
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0rem 5rem;
-  transition: all 0.2s 0.7s;
-  overflow: hidden;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
 
-form.sign-up-form {
-  opacity: 0;
-  z-index: 1;
-}
-
-form.sign-in-form {
-  z-index: 2;
-}
 
 .title {
   font-size: 2.2rem;
@@ -153,6 +167,12 @@ form.sign-in-form {
   cursor: pointer;
   border-radius: 17px;
 }
+.button:hover {background-color: #006666}
+
+.button:active {
+  background-color: #006666;
+ 
+}
 .button1{
   background-color:#30593D; /* Green */
   border: solid;
@@ -173,26 +193,25 @@ form.sign-in-form {
 
 </style>
 <body>
-
+<form  action ='signin.php' method = 'post'>
  <div class="rightdiv" >
  
    <h2 style="padding-left:250px;  color: white; padding-top: 50px; "  class="title"  >Sign in</h2>
    <div class="input-field">
     <i class="fas fa-user"></i>
-    <input type="text" placeholder="Username" name="username_login"required/>
+    <input type="text" placeholder="Username" name="user_name"required/>
   </div>
   <div class="input-field">
     <i class="fas fa-lock"></i>
-    <input type="password" placeholder="Password"name="password_login"required/> 
+    <input type="password" placeholder="Password"name="password"required/> 
   </div>       
-         <input type="submit" class="button" value="Sign in" name="submit">
+  <button  class="button" value ="signin" name="signin">Sign in</button>
  </div>
- 
+ </form>
  <div class="leftdiv">
   <input type="button" onclick="document.location='regesteration.php'" class="button1" value="Sign up" name="submit"> 
-  
  </div>
- 
+
 </body>
 
 </html>
