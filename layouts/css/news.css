@@ -11,6 +11,7 @@ body {
   background-color: #1b1b1b;
   color: white;
   box-sizing: border-box;
+  
 }
 li,a,button{
   font-family: "Montserrat",sans-serif;
@@ -291,4 +292,77 @@ margin-top: 39px;
   margin-left: 1450px;
   margin-top: 20px;
   vertical-align: middle;
+}
+/******************NEWS STYLE*************************************/
+.bahgat{
+    background-color: black;
+    position: relative;
+    color: white;
+    height: 200px;
+    text-align: center;
+    font-size: 45px;
+
+}
+.containerr{
+    background-color: black;
+    border: 3px solid #30593D;
+    border-radius: 10px;
+    height: 450px;
+    width: 600px;
+    margin-top: 120px;
+    margin-left: 100px;
+    
+}
+h3{
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+.soura{
+    
+    margin-left: 70px;
+    margin-top: 80px;
+}
+h1{
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+    
+
+}
+.container1{
+    background-color: black;
+    border: 3px solid #30593D;
+    border-radius: 10px;
+    height: 450px;
+    width: 600px;
+    position: relative;
+    top: -450px;
+    margin-left: 740px;
+}
+.container2{
+    background-color: black;
+    border: 3px solid #30593D;
+    border-radius: 10px;
+    height: 450px;
+    width: 600px;
+    position: relative;
+    margin: auto;
+    margin-top: -400px;
+    margin-left: 100px;
+}
+.container3{
+    background-color: black;
+    border: 3px solid #30593D;
+    border-radius: 10px;
+    height: 450px;
+    width: 600px;
+    position: relative;
+    margin: auto;
+    margin-top: -450px;
+    margin-left: 740px;
+}
+.soura1{
+    margin-left: 70px;
+    margin-top: 70px;
 }
