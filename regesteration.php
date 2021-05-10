@@ -1,3 +1,25 @@
+<?php
+ session_start(); 
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "instinct_games";
+
+if(isset($_POST['signup']))
+{
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+  $sql = "INSERT INTO users (user_name, name, e_mail,address,PASSWORD	) VALUES
+  ('$_POST[username]', '$_POST[name]', '$_POST[email]','$_POST[address]','$_POST[password]') ";
+ 
+  if (mysqli_query($conn, $sql)) {
+    header("Location:signin.php");
+ } 
+ else {
+   echo "<P color:RED>Error</p> deleting record: " . $conn->error;
+ }
+}
+
+?>
 <html>
 <head>
 </head>
@@ -25,7 +47,8 @@ body, input {
 
 .left {
   left: 0;
-  background-color: #30593D;
+  background-color: #30593D;;
+
 }
 
 
@@ -56,34 +79,11 @@ body, input {
   grid-template-columns: 1fr;
   z-index: 5;
 }
-
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 0rem 5rem;
-  transition: all 0.2s 0.7s;
-  overflow: hidden;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-
-form.sign-up-form {
-  opacity: 0;
-  z-index: 1;
-  
-}
-
-form.sign-in-form {
-  z-index: 2;
-}
-
 .title {
   font-size: 2.2rem;
   color: #e6e6e6;
   margin-bottom: 10px;
-  transform: translate(34%, 50%);
+  transform: translate(34%, 250%);
 }
 
 .input-field {
@@ -97,7 +97,7 @@ form.sign-in-form {
   grid-template-columns: 15% 85%;
   padding: 0 0.4rem;
   position: relative;
-  transform: translate(41%, 50%);
+  transform: translate(55%, 250%);
 }
 
 .input-field i {
@@ -234,7 +234,7 @@ form.sign-in-form {
   background-color: #30593D;
   border: none;
   border-radius: 15px;
-  transform: translate(900%, 600%);
+  transform: translate(1300%, 700%);
 }
 .button1:hover {background-color: #006666}
 
@@ -255,7 +255,7 @@ form.sign-in-form {
   background-color: white;
   border: none;
   border-radius: 15px;
-  transform: translate(230%, 50%);
+  transform: translate(280%, 260%);
 }
 .button:hover {background-color: #006666}
 
@@ -283,14 +283,13 @@ form.sign-in-form {
 
   
   <div class="split left">
-      
+      <form class="split left" action ='regesteration.php' method = 'post'>
     <h2 class="title">Sign up</h2>
-      <div class="input-field">
-        <i class="fas fa-user"></i>
-        
-        <input type="text" placeholder="Fullname" name="name" required/>
-      </div>
-
+    
+    <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Fullname" name="name" required/>
+            </div>
       <div class="input-field">
         <i class="far fa-user-circle"></i>
         <input type="text" placeholder="Username" name="username" required/>
@@ -305,39 +304,22 @@ form.sign-in-form {
         <i class="fas fa-house-user"></i>
         <input type="text" placeholder="Address"  name="address"required/>
       </div>
-      <div class="input-field">
-      <i class="fas fa-phone-alt"></i>
-        <input type="text" placeholder="Phone" name="phoneno" required/>
-      </div>
-      
+     
       <div class="input-field">
         <i class="fas fa-lock"></i>
         <input type="password" placeholder="Password"  name="password"required/>
-      </div>
-
-      <div class="input-field">
-        <i class="fas fa-check-circle"></i>
-        <input type="password" placeholder="Confirm password"name="cpassword" required/>
-      </div>
-      <button class="button">Sign Up</button>
-    </div>
-      </div>
-
-     
-      </div>
-        <button class="button">Sign Up</button>
-      </div>
-      
-    
-      
+        </div>
+        <button  class="button" value ="signup" name="signup">Sign Up</button>
 </div>
+
 </div>
+
+</form>
+
 <button onclick="document.location='signin.php'" class="button1 ">Sign in</button>
 </div>
 
 </body>
-
-
 
 </html>
 
