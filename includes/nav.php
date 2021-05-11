@@ -45,7 +45,9 @@
 </head>
     <header>
         <div class="logo">
+        <a href="index.php">
             <img class="" src="images/Bakaar.png" alt="logo">
+            </a>
         </div>
         <nav>
             <ul class="nav_links">
@@ -66,6 +68,7 @@
                 <li><a href="Contact Us.php">CONTACT US</a></li>
             </ul>
         </nav>
-         <input type="submit" class="button" value="Log in" name="submit">
-         <input type="submit" class="button1" value="Regstier" name="submit">
+         <input type="submit" class="button"onclick="document.location='signin.php'" value="Log in" name="submit">
+         <input type="submit" class="button1" onclick="document.location='regesteration.php'" value="Regstier" name="submit">
     </header>
+    </html>

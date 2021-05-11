@@ -2,7 +2,7 @@
 <html>
 <head>
     <style>
-        body{
+body{
 	margin:0 auto;
 	
 	padding: 0;
@@ -103,7 +103,7 @@ text-align: center;
 	border: 2px solid rgb(0, 173, 72);
 }
     </style>
-	<title>about US UI</title>
+	<title>about US</title>
 	<link rel="stylesheet" type="text/css" href="layouts/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Montserrat|Quicksand&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
