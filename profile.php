@@ -12,6 +12,9 @@
 <body>
     <?php include("includes/nav.php");
     ?>
+    <div class="space">
+    
+    </div>
     <div class="wrapper">
         <h1 class="ta-c heded">PROFILE</h1>
         <div class="myprofile">
