@@ -48,7 +48,7 @@
                     <img src="layouts/img/4.jpg" alt="">
                 </div>
                 <div class="game-btn">
-                    <input type="button" class="button1 edited" value="VIEW" style="box-shadow: 0 0 15px #30593D;">
+                    <input type="button" onclick="document.location='GamePage2.php'"class="button1 edited" value="VIEW" style="box-shadow: 0 0 15px #30593D;">
                 </div>
             </div>
         </div>

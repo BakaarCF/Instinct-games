@@ -56,8 +56,8 @@
                 <div class="dropdown-menu">
 <button class="menu-btn">GAMES <i class="fas fa-angle-down"></i></button>
 <div class="menu-content">
+<a class="links-hidden" href="GamePage2.php">ATLAS</a>
 <a class="links-hidden" href="GamePage.php">ARK:Survival Evolved</a>
-<a class="links-hidden" href="#">ATLAS</a>
 
 </div>
 </div>
