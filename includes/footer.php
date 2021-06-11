@@ -143,7 +143,7 @@
 					<div class="footer_col">
 						<h4>Company</h4>
 						<ul>
-							<li><a href="about us.php">about us</a></li>
+							<li><a href="Aboutus.php">about us</a></li>
 							<li><a href="#">our services</a></li>
 							<li><a href="#">privacy policy</a></li>
 						</ul>
@@ -153,7 +153,7 @@
 						<ul>
 							<li><a href="#">FAQ</a></li>
 							
-							<li><a href="#">returns</a></li>
+							<li><a href="index.php">returns</a></li>
 							
 						</ul>
 					</div>
@@ -170,9 +170,9 @@
             </h5>
             
 						<div class="social_links">
-							<a href="#"><i class="fab fa-facebook-f"></i></a>
-							<a href="#"><i class="fab fa-instagram"></i></a>
-							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.facebook.com/InstinctGames/"><i class="fab fa-facebook-f"></i></a>
+							<a href="https://www.linkedin.com/company/instinct-games"><i class="fab fa-linkedin"></i></a>
+							<a href="https://twitter.com/instinctgames"><i class="fab fa-twitter"></i></a>
 						</div>
 					</div>
 				</div>

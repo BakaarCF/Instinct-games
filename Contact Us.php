@@ -12,18 +12,18 @@
 <body style="background-image: url('layouts/img/map.png');">
     <?php include("includes/nav.php");
     ?>
-    <div class="wrapper">
+    <div class="wrapper"style="background-image: url('layouts/img/map.png');" >
        <div class="mailicon">
        <i class="far fa-envelope-open"></i>
         </div>
         <h1 style="text-align: center; color:black;">Drop Us A Message</h1>
         <div class="myprofile">
-            <div class="profiledata">
+            <div class="profiledata"  style="background-color:#1b1b1b;">
             <input type="text" class="cus-input"  placeholder="Email"><br>
             <input type="text" class="cus-input"  placeholder="Subject"><br>
             <input type="text" style="height: 200px;"class="cus-input"  placeholder="Write Us A Message"><br>
             <div class="update-btn">
-                <input type="button" class="button1 editedd" value="SEND">
+                <input type="button" class="button1 editedd" value="SEND" style="box-shadow: 0 0 15px #30593D;">
             </div>
             </div>
             
