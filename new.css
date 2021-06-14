@@ -6,12 +6,11 @@
   
 }
 
+
 body { 
-  
-  background-color: #1b1b1b;
+ background-color: #1b1b1b;
   color: white;
   box-sizing: border-box;
-  
 }
 li,a,button{
   font-family: "Montserrat",sans-serif;
@@ -293,3 +292,176 @@ margin-top: 39px;
   margin-top: 20px;
   vertical-align: middle;
 }
+
+
+
+.bahgat{
+    background-color: black;
+    position: relative;
+    color: white;
+    height: 50px;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 80px;
+    margin-right:50px;
+
+
+}
+.containerr{
+    background-color: black;
+    border: 3px solid #30593D;
+    border-radius: 10px;
+    height: 455px;
+    width: 600px;
+    position: relative;
+    margin-top: 120px;
+    margin-left: 100px;
+
+}
+.container1{
+    background-color: black;
+    border: 3px solid #30593D;
+    border-radius: 10px;
+    height: 455px;
+    width: 600px;
+    position: relative;
+    top: -455px;
+    margin-left: 740px;
+    max-width: 100%;
+}
+.container2{
+    background-color: black;
+    border: 3px solid #30593D;
+    border-radius: 10px;
+    height: 455px;
+    width: 600px;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+    margin-left: -642px;
+    max-width: 100%;
+}
+.container3{
+    background-color: black;
+    border: 3px solid #30593D;
+    border-radius: 10px;
+    height: 455px;
+    width: 600px;
+    position: relative;
+    margin: auto;
+    margin-top: -405px;
+    margin-left: 640px;
+}
+h3{
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+.soura{
+    transition: .5s ease;
+    backface-visibility: hidden;
+    margin-left: 70px;
+    margin-top: 80px;
+    opacity: 1;
+    display: block;
+    max-width: 100%;
+}
+.soura1{
+    transition: .5s ease;
+    backface-visibility: hidden;
+    margin-left: 70px;
+    margin-top: 55px;
+    opacity: 1;
+    display: block;
+}
+.soura2{
+    transition: .5s ease;
+    backface-visibility: hidden;
+    margin-left: 70px;
+    margin-top: 60px;
+    opacity: 1;
+    display: block;
+
+}
+.soura3{
+    transition: .5s ease;
+    backface-visibility: hidden;
+    margin-left: 70px;
+    margin-top: 55px;
+    opacity: 1;
+    display: block;
+}
+h1{
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+
+
+}
+
+ .button30
+ {
+
+  background-color: #30593D;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+ }
+ .beego{
+     position: absolute;
+     margin-left: 200px;
+     margin-bottom: 70px ;
+ }
+ .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 60%;
+    left: 43%;
+    transform: translate(-70, -70);
+    -ms-transform: translate(-70%, -70);
+    text-align: center;
+    padding: 10px;
+  }
+  .containerr:hover .image {
+    opacity: 0.3;
+  }
+  
+  .containerr:hover .middle {
+    opacity: 1;
+  }  
+  .text {
+      background-color: #04AA6D;
+      color: white;
+      font-size: 16px;
+      padding: 16px 32px;
+    }
+  .container1:hover .image {
+    opacity: 0.3;
+  }a
+  
+  .container1:hover .middle {
+    opacity: 1;
+  }  
+  .container2:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container2:hover .middle {
+    opacity: 1;
+  }  
+  .container3:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container3:hover .middle {
+    opacity: 1;
+  }  
+  
+  
