@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2021 at 05:59 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Generation Time: Jun 14, 2021 at 03:14 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -55,22 +55,21 @@ CREATE TABLE `games` (
 --
 
 CREATE TABLE `users` (
-  `user_name` varchar(17) NOT NULL,
-  `name` varchar(30) NOT NULL,
-  `e_mail` varchar(25) NOT NULL,
-  `address` varchar(45) NOT NULL,
-  `PASSWORD` varchar(12) NOT NULL,
-  `pp_path` text DEFAULT NULL,
-  `phoneno` varchar(200) NOT NULL
+  `id` int(11) UNSIGNED NOT NULL,
+  `user_name` text NOT NULL,
+  `name` text NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL,
+  `phone` text NOT NULL,
+  `image` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_name`, `name`, `e_mail`, `address`, `PASSWORD`, `pp_path`, `phoneno`) VALUES
-('beego26', 'youssef mohamed ahmed', 'youssefkamal2626@gmail.co', 'madinet nasr', 'heego26', NULL, ''),
-('bikoo', 'Amr khaled', 'amr@gmail.com', 'aaa', '123', NULL, '');
+INSERT INTO `users` (`id`, `user_name`, `name`, `email`, `password`, `phone`, `image`) VALUES
+(1, '18204204', 'Abdelrahman Sayed   ', 'bodda@gmail.com', '+201158999135', '25613sasasaas', 'unnamed.jpg');
 
 -- --------------------------------------------------------
 
@@ -97,8 +96,7 @@ ALTER TABLE `games`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`user_name`),
-  ADD UNIQUE KEY `user_name` (`user_name`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user_type`
@@ -115,6 +113,12 @@ ALTER TABLE `user_type`
 --
 ALTER TABLE `games`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

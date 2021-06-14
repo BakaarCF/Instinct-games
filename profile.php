@@ -13,25 +13,25 @@
     <?php include("includes/nav.php");
     ?>
     <div class="space">
-    
+
     </div>
-    <div class="wrapper">
+    <div class="wrapper" style="background-color:#1b1b1b;">
         <h1 class="ta-c heded">PROFILE</h1>
         <div class="myprofile">
             <div class="profiledata">
-            <input type="text" class="cus-input"><br>
-            <input type="text" class="cus-input"><br>
-            <input type="text" class="cus-input"><br>
-            <input type="text" class="cus-input"><br>
-            <input type="text" class="cus-input"><br>
+            <input type="text" class="cus-input" placeholder="UserName"><br>
+            <input type="text" class="cus-input" placeholder="Email"><br>
+            <input type="text" class="cus-input" placeholder="Password"><br>
+            <input type="text" class="cus-input" placeholder="Address"><br>
+            <input type="text" class="cus-input" placeholder="MobilePhone"><br>
             <div class="update-btn">
-                <input type="button" class="button1 editedd" value="UPDATE">
+                <input type="button" class="button1 editedd" value="UPDATE" style="box-shadow: 0 0 15px #30593D;">
             </div>
             </div>
             <div class="upload">
                 <div class="uploadcontainer">
                     <div class="uploadbutton">
-                    <input type="button" style="margin-top: 40%;" class="button1 editedd" value="Upload A Pic.">
+                    <input type="button" style="margin-top: 40%;" class="button1 editedd" value="Upload A Pic." style="box-shadow: 0 0 15px #30593D;">
 
                     </div>
                 </div>

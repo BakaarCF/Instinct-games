@@ -8,7 +8,7 @@ body{
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
 }
-.container{
+.containerrr{
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -43,11 +43,11 @@ body{
 text-align: center;
 }
 .cards{
-	width: 60pc;
+	width: 90pc;
 	display:flex;
 	justify-content: center;
 	align-items: center;
-    margin:20px;
+    margin:40px;
 	flex-wrap:wrap;
 
 }
@@ -59,8 +59,7 @@ text-align: center;
 	width: 19rem;
 	margin: 80px;
 	border-color: limegreen;
-	border-width: 1
-	px;
+	border-width: 1px;
 	border-style: solid;
 	margin-bottom: 3px;
 	padding-top: 10px;
@@ -103,7 +102,7 @@ text-align: center;
 	border: 2px solid rgb(0, 173, 72);
 }
     </style>
-	<title>about US</title>
+	<title>Aboutus | Instinct Games </title>
 	<link rel="stylesheet" type="text/css" href="layouts/css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Montserrat|Quicksand&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -111,11 +110,11 @@ text-align: center;
 <body>
 <?php include("includes/nav.php");
     ?>
-	<div class="container">
+	<div class="containerrr">
 	<div class="ABOTUS">
 	<h1>ABOUT INSTINCT GAMES</h1>
 	</div>
-		<div class="nav">
+		<div class="navv">
 		<div class="about-us">
 			<div class="who-we-are">
 				<p style="text-align: center;">Founded in 2011, Instinct Games is Egypt’s leading game development studio. Here at Instinct.<br> Games we aim to develop and produce high quality games on all major platforms utilizing our<br>competent team.</p>
@@ -125,7 +124,7 @@ text-align: center;
 					 <br>
 					 <br>
 					 <br>
-					 <h1>           Core team  </h1>
+					 <h1> Core team  </h1>
 			</div>
 			<div class="cards">
 				<div class="card">
