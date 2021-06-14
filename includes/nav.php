@@ -13,12 +13,12 @@
         <nav>
             <ul class="nav_links">
                 <li><a href="index.php">HOME</a></li>
-                <li><a href="#">NEWS</a></li>
+                <li><a href="news.php">NEWS</a></li>
                 <li><a href="profile.php">PROFILE</a></li>
                 <li><a href="Aboutus.php">ABOUT</a></li>
-                <li><a href="#">GAMES</a></li>
-                <li><a href="#">JOBS</a></li>
-                <li><a href="#">CONTACT US</a></li>
+                <li><a href="GamePage.php">GAMES</a></li>
+                <li><a href="Jobs.php">JOBS</a></li>
+                <li><a href="Contact Us.php">CONTACT US</a></li>
             </ul>
         </nav>
          <input type="submit" class="button"onclick="document.location='signin.php'" value="Log in" name="submit">
