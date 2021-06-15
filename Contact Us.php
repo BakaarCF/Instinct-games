@@ -9,25 +9,29 @@
 
     <title>Contact Us | Instinct Games</title>
 </head>
-<body style="background-image: url('layouts/img/map.png');">
+<body  id="contact" style="background-image: url('layouts/img/7.jpg');">
     <?php include("includes/nav.php");
     ?>
-    <div class="wrapper"style="background-image: url('layouts/img/map.png');" >
-       <div class="mailicon">
-       <i class="far fa-envelope-open"></i>
-        </div>
-        <h1 style="text-align: center; color:black;">Drop Us A Message</h1>
-        <div class="myprofile">
-            <div class="profiledata"  style="background-color:#1b1b1b;">
-            <input type="text" class="cus-input"  placeholder="Email"><br>
-            <input type="text" class="cus-input"  placeholder="Subject"><br>
-            <input type="text" style="height: 200px;"class="cus-input"  placeholder="Write Us A Message"><br>
-            <div class="update-btn">
-                <input type="button" class="button1 editedd" value="SEND" style="box-shadow: 0 0 15px #30593D;">
-            </div>
-            </div>
-            
-        </div>
+    <div class="contact-section"style = "margin-top:36px;">
+      <div class="contact-info"style = "margin-top:40px; margin-right:56px;">
+        
+        <div><i class="fas fa-map-marker-alt"></i>110 El Merghany St.Heliopolis,
+         Cairo,Egypt</div>
+        <div><i class="fas fa-envelope"></i>Info@Instinctgames.Com</div>
+        <div><i class="fas fa-phone"></i>+00 0000 000 000</div>
+        <div><i class="fas fa-clock"></i>Mon - Fri 8:00 AM to 5:00 PM</div>
+      </div>
+    
+      <div class="contact-form"style = "margin-top:10px;">
+      <i class="far fa-envelope-open" style = "font-size: 40px; margin-left:323px; color:black;"></i>
+          <h2 style="margin-top:20px; color: black;">Drop Us A Message </h2>
+        <form class="contact" action="" method="post">
+          <input type="text" name="name" class="text-box123" style ="border-radius: 10px;  ;" placeholder="Email" required>
+          <input type="email" name="email" class="text-box123"style ="border-radius: 10px" placeholder="Subject" required>
+          <textarea name="message" rows="5"style ="border-radius: 10px" placeholder="Your Message" required></textarea>
+          <input type="submit" name="submit" class="send-btn"  value="Send">
+        </form>
+      </div>
     </div>
         <?php include("includes/footer.php");
     ?>
