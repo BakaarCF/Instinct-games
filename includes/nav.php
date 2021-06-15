@@ -1,23 +1,4 @@
 <head>
-   <?php
-   session_start();
-   $servername = "localhost";
-   $username = "root";
-   $password = "";
-   $dbname = "instinct_games";
-   
-   $conn = mysqli_connect($servername,$username,$password,$dbname);
-
-      $sql = "SELECT * FROM pages";
-      $rows = mysqli_query($conn,$sql);
-
-      if(!empty($_SESSION['user_id'])) {
-         $user_id = $_SESSION['user_id'];
-         $sql = "SELECT * FROM users WHERE id = '$user_id'";
-         $result = mysqli_query($conn, $sql);
-         $user = mysqli_fetch_assoc($result);
-      }
-    ?>
 <style>
     
 .menu-btn {
@@ -76,19 +57,13 @@
             <ul class="nav_links">
                 <li><a href="index.php">HOME</a></li>
                 <li><a href="news.php">NEWS</a></li>
-                <li><a href="MyProfile.php?id=<?php echo $_SESSION['user_id']; ?>">PROFILE</a></li>
+                <li><a href="MyProfile.php">PROFILE</a></li>
                 <li><a href="Aboutus.php">ABOUT</a></li>
                 <div class="dropdown-menu">
-               <button class="menu-btn">GAMES <i class="fas fa-angle-down"></i></button>
-               <div class="menu-content">
-               <!-- <a class="links-hidden" href="GamePage2.php" >ATLAS</a>
-               <a class="links-hidden" href="GamePage.php">ARK:Survival Evolved</a> -->
-               <?php
-                  foreach($rows as $row){
-                  
-               ?>
-               <a class="links-hidden" href="GamePage.php?id=<?php echo $row['id']; ?>"><?php echo $row['page_name']; ?></a>
-               <?php } ?>
+<button class="menu-btn">GAMES <i class="fas fa-angle-down"></i></button>
+<div class="menu-content">
+<a class="links-hidden" href="GamePage2.php" >ATLAS</a>
+<a class="links-hidden" href="GamePage.php">ARK:Survival Evolved</a>
 
 </div>
 </div>
@@ -97,18 +72,7 @@
                 <li><a href="Contact Us.php">CONTACT US</a></li>
             </ul>
         </nav>
-        <?php
-         if(empty($_SESSION['user_id'])) {
-            print '
-            <a href="signin.php"><input type="submit" class="button" value="Log in" name="submit"></a>
-            <a href="signup.php"><input type="submit" class="Register-button" value="Regstier" name="submit"></a>
-            ';
-         } else {
-            echo "<b style='color: white;'>Welcome, ".$user['name']."</b>";
-         }
-        
-        ?>
-         
+         <input type="submit" class="button"onclick="document.location='signin.php'" value="Log in" name="submit">
+         <input type="submit" class="Register-button" onclick="document.location='regesteration.php'" value="Regstier" name="submit">
     </header>
     </html>
-     
