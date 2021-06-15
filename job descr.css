@@ -419,64 +419,11 @@ color: #3d6b4b;
    left: 10%;
    font-size: 100px;
  }
- #be .company{
-  
-   font-weight: bold;
-   font-size: 30px;
-   margin-left: 10%;
-   margin-top: 10%;
-   
-   
-}
-#be .companydescr{
-   margin-top: 10px;
-   font-size: large;
-   font-weight: normal;
-   margin-left: 2%;
 
-}
-#be .gamedesigner{
-   font-size: large;
-   font-weight: bold;
-   margin-left: 2%;
-   margin-top: 1%;
-}
-#be .t-a{
-   font-size: large;
-   font-weight: normal;
-   margin-top: 10px;
-   margin-left: 2%;
-}
-#be .t-b{
-   font-size: large;
-   font-weight: normal;
-   margin-top: 3%;
-   margin-left: 2%;
-}
-#be .skill{
-   font-size: large;
-   font-weight: normal;
-   margin-bottom: 20px;
-   margin-top: 1%;
-   margin-left: 2%;
-}
-#be .emp{
-   font-size: 30px;
-   font-weight: bold; 
-}
-#be .order{
-   font-size: large;
-   font-weight: normal;
-   margin-bottom: 20px;
-   left: 20px;
-   margin-top: 1%;
-   margin-left: 2%;
-}
 #be .zorar{
    position: absolute;
    left:20%;
    top: 350px;
-   color: black;
    transform: translate(-50%,-50%);
    font-size: 16px;
    padding: 16px 30px;
@@ -484,7 +431,6 @@ color: #3d6b4b;
    cursor: pointer;
    border-radius: 5px;
    text-align: center; 
-   background-color: blueviolet; 
    transition: all 0.5s;
 }
 #be .zorar span {
@@ -511,36 +457,9 @@ color: #3d6b4b;
    opacity: 1;
    right: 0;
  }
- #be .jobdescr{
-   margin-top: 1%;
- }
- #be .skills{
- margin-top: 1%;
-}
-#be .p1{
- font-size: large;
- font-weight: normal;
- margin-left: 2%;
- color: black;
-}
-#be .p2{
- font-size: large;
- font-weight: normal;
- margin-top:2%;
- margin-left: 2%;
- color: black;
-}
-#be .h4{
- margin-top: 1%;
- margin-bottom: 1%;
-}
-#be .p3{
- font-size: large;
- font-weight: normal;
- margin-top:2%;
- margin-left: 2%;
- color: black;
-}
+ 
+ 
+ 
 #be .ul li::marker {
  color: black; 
 }

@@ -407,11 +407,12 @@ color: #3d6b4b;
 
 #about .about h1{
   font-family: 'Josefin Sans', cursive;
-  font-size: 52px;
+  font-size: 45px;
   margin-bottom: 60px;
   text-align: center;
-  background-color: white;
-  height: 71px;
+  background-color: rgb(212, 212, 212);
+  color:#417552;
+  height: 100%;
 }
 
 #about .team{
@@ -425,15 +426,15 @@ color: #3d6b4b;
 }
 
 #about .team .team_member{
-  background: #fff;
+  background: #000;
   margin: 15px;
   margin-bottom: 50px;
   width: 500px;
   padding: 26px;
   line-height: 26px;
-  color: #8e8b8b;  
+  color: #fff;  
   position: relative;
-  border: 1px solid;
+  border: 1px solid #30593D;
   padding: 20px;
   box-shadow: 5px 10px 18px #30593D;
 
@@ -461,7 +462,7 @@ color: #3d6b4b;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: #fff;
+  background: #000;
 
 }
 
