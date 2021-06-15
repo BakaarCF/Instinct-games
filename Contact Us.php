@@ -9,7 +9,7 @@
 
     <title>Contact Us | Instinct Games</title>
 </head>
-<body  id="contact" style="background-image: url('layouts/img/7.jpg');">
+<body  id="contact" style="background-image: url('layouts/img/BG.png');">
     <?php include("includes/nav.php");
     ?>
     <div class="contact-section"style = "margin-top:36px;">
@@ -23,8 +23,8 @@
       </div>
     
       <div class="contact-form"style = "margin-top:10px;">
-      <i class="far fa-envelope-open" style = "font-size: 40px; margin-left:323px; color:black;"></i>
-          <h2 style="margin-top:20px; color: black;">Drop Us A Message </h2>
+      <i class="far fa-envelope-open" style = "font-size: 40px; margin-left:323px; color:white;"></i>
+          <h2 style="margin-top:20px; color: white;">Drop Us A Message </h2>
         <form class="contact" action="" method="post">
           <input type="text" name="name" class="text-box123" style ="border-radius: 10px;  ;" placeholder="Email" required>
           <input type="email" name="email" class="text-box123"style ="border-radius: 10px" placeholder="Subject" required>

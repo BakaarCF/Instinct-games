@@ -7,7 +7,7 @@
 </head>
 <body id="about">
   <?php include("includes/nav.php");?>
-<div class="about" style="width:103%;  ">
+<div class="about" style="width:100%;  ">
     <h1 style="color: black; font-size: 45px; ">About  Instinct  Games</h1>
     </div>
       <div class="nav">
