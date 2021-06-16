@@ -140,7 +140,7 @@ img {vertical-align: middle;}
 
 <div class="mySlides fade">
   
-  <img src="layouts/img/ARK2.jpg" style="width:100%;">
+  <img src="layouts/img/HomeArk.jpg" style="width:100%;">
   <div class="text"><b>Ark:Survival Evolved</b></div>
 </div>
 
