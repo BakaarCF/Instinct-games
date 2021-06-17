@@ -1,3 +1,24 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "instinct_games";
+   
+    $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+    if(isset($_GET['id'])) {
+        $page_id = $_GET['id'];
+        $sql = "SELECT * FROM pages WHERE id = '$page_id'";
+        $rows = mysqli_query($conn,$sql);
+        $page = mysqli_fetch_assoc($rows);
+
+        $page_images = "SELECT * FROM page_images WHERE page_id = '$page_id'";
+        $rowss = mysqli_query($conn,$page_images);
+        $images = mysqli_fetch_assoc($rowss);
+
+    }
+      
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +31,15 @@
     <link rel="icon" href="images/Bakaar.png" type="image/x-icon">
 </head>
 <body>
-<?php include("includes/nav.php");
+<?php
+include("database.php");
+include("includes/nav.php");
     ?>
     <div class="game-container">
     <div class="game-content">
 
     
-    <h1 style="margin:2px;">WELCOME PLAY FOR EVERYONE <span style="color:#30593D">Ark: Survival Evolved!</span></h1>
+    <h1 style="margin:2px;">WELCOME PLAY FOR EVERYONE <span style="color:#30593D"><?php echo $page['page_name']; ?>!</span></h1>
     <p class="txtt-rotate" style="color:#999; "></p>
 <br>
 
@@ -26,19 +49,19 @@
 <ul>
     <li>
         <span>Category:</span>
-        "Vertical Shooter"
+        "<?php echo $page['category']; ?>"
     </li>
     <li>
         <span>Requirments:</span>
-        "Intel Core i5-2400/AMD FX-8320 or better, 8 GB RAM, NVIDIA GTX 670 2GB/AMD Radeon HD 7870 2GB or better, Version 10, 60 GB"
+        "<?php echo $page['requirments']; ?>"
     </li>
     <li>
         <span>Multiplayer:</span>
-        "Games Controller System"
+        "<?php echo $page['multiplayer']; ?>"
     </li>
     <li>
         <span>Visual Effect:</span>
-        "Operating System"
+        "<?php echo $page['visual_effects']; ?>"
     </li>
 
 </ul>
@@ -52,17 +75,18 @@
 <li style="margin: 0 auto;
   margin-top: 50px;">
 <div class="overview-history-videoo">
-    <a href="https://www.youtube.com/watch?v=5fIAPcVdZO8"><img src="layouts/img/ArkLogo.png" style="vertical-align: middle;
-  border-style: none; width:105px; height:6%;" ><i class="far fa-play-circle"></i></a> 
+    <a href="<?php echo $page['video_link']; ?>"><img src="layouts/img/ArkLogo.png" style="vertical-align: middle;
+  border-style: none; width:105px; height:6%;" ><i class="far fa-play-circle"></i></a>
+  <!-- <iframe width="1904" height="800" src="https://www.youtube.com/embed/5fIAPcVdZO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 </div>
 <div class="overview-history-content">
    
     <h4>
         <a style="color:#999;" href="#">Release Date</a>
     </h4>
-    <span style="color:#999;">August 29, 2017</span>
+    <span style="color:#999;"><?php echo $page['release_date']; ?></span>
 </div>
-<span style="color:#999;">ARK: Survival Evolved Official Launch Trailer!</span>
+<span style="color:#999;"><?php echo $page['page_name']; ?> Official Launch Trailer!</span>
 </li>
 </ul>
 </div>
@@ -88,14 +112,14 @@
 <div class="grid">
 <table >
 <tr>
-    <td><a href="layouts/img/ARK3.png" target="_blank"><img src="layouts/img/ARK3.png" height="300px" width="100%"/></a></td>
-    <td><a href="layouts/img/ARK2.jpg" target="_blank"><img src="layouts/img/ARK2.jpg" height="300px" width="100%"/></a></td>
-    <td><a href="layouts/img/ARK4.png" target="_blank"><img src="layouts/img/ARK4.png" height="300px" width="100%"/></a></td>
+    <td><a href="layouts/img/<?php echo $images['image'][0] ?>" target="_blank"><img src="layouts/img/ARK3.png" height="300px" width="100%"/></a></td>
+    <td><a href="layouts/img/<?php echo $images['image'][1] ?>" target="_blank"><img src="layouts/img/ARK2.jpg" height="300px" width="100%"/></a></td>
+    <td><a href="layouts/img/<?php echo $images['image'][2] ?>" target="_blank"><img src="layouts/img/ARK4.png" height="300px" width="100%"/></a></td>
 </tr>
 <tr>
-    <td><a href="layouts/img/ARK5.jpg" target="_blank"><img src="layouts/img/ARK5.jpg" height="300px" width="100%"/></a></td>
-    <td><a href="layouts/img/ARK1.jpg" target="_blank"><img src="layouts/img/ARK1.jpg" height="300px" width="100%"/></a></td>
-    <td><a href="layouts/img/ARK6.jpg" target="_blank"><img src="layouts/img/ARK6.jpg" height="300px" width="100%"/></a></td>
+    <td><a href="layouts/img/<?php echo $images['image'][3] ?>" target="_blank"><img src="layouts/img/ARK5.jpg" height="300px" width="100%"/></a></td>
+    <td><a href="layouts/img/<?php echo $images['image'][4] ?>" target="_blank"><img src="layouts/img/ARK1.jpg" height="300px" width="100%"/></a></td>
+    <td><a href="layouts/img/<?php echo $images['image'][5] ?>" target="_blank"><img src="layouts/img/ARK6.jpg" height="300px" width="100%"/></a></td>
 </tr>
 </table>
 </div>

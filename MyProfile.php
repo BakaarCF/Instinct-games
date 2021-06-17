@@ -1,5 +1,4 @@
 <?php
-session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -51,7 +50,7 @@ if(isset($_POST['update'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="layouts/css/style.css">
 	<script src="https://kit.fontawesome.com/b1361fb5d5.js" crossorigin="anonymous"></script>
-	<title>GamePage | Instinct Games</title>
+	<title>Profile | Instinct Games</title>
 	<link rel="icon" href="images/Bakaar.png" type="image/x-icon">
 	<style>
 	* {
@@ -194,9 +193,6 @@ if(isset($_POST['update'])) {
 		<h1 class="ta-c heded" style="margin-top:20px; text-shadow:0 0 25px #30593D;">PROFILE</h1>
 		<div class="pwrapper">
 			<form action="MyProfile.php?id=<?php echo $user_id; ?>" method="POST" enctype="multipart/form-data">
-				<div class="title">
-					<h1>Amr khaled</h1> 
-				</div>
 				<div class="contact-form">
 					<div class="input-fields">
 						<input type="text" class="input" name="name" value="<?php echo $user['name']; ?> " autocomplete="off" placeholder="Name">
