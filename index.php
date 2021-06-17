@@ -1,17 +1,23 @@
+<?php
+  session_start();
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "instinct_games";
+  
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+  $sql = "SELECT * FROM pages";
+  $rows = mysqli_query($conn,$sql);
+
+  if(isset($_GET['signout'])) {
+    // session_unset();
+    session_destroy();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "instinct_games";
-    
-    $conn = mysqli_connect($servername,$username,$password,$dbname);
-
-    $sql = "SELECT * FROM pages";
-    $rows = mysqli_query($conn,$sql);
-  ?>
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -129,6 +135,8 @@ img {vertical-align: middle;}
 <body>
     
     <?php include("includes/nav.php");
+
+    
     ?>
     <div class="slideshow-container">
 

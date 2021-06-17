@@ -26,7 +26,9 @@ $resultt = mysqli_query($conn,$sqll);
     <link rel="icon" href="images/Bakaar.png" type="image/x-icon">
 </head>
 <body style="background-image: url('layouts/img/BG.png');">
-<?php include("includes/nav.php");
+<?php 
+session_start();
+include("includes/nav.php");
     ?>
 <h3 style="font-weight: bold; color: #F9F9F9; font-size:38.25px;text-align: center; margin:35px; ">
     <span><?php echo $Countt['cnt']; ?> Open Positions</span>
@@ -39,7 +41,7 @@ $resultt = mysqli_query($conn,$sqll);
         <div class="jcards">
             <h3><a href="job descr.php"><?php echo $row['job']; ?></a></h3>
             <p> <i class="fas fa-map-marker-alt"></i> <?php echo $row['location']; ?></p>
-            <a href="jobApply.php?id=<?php echo $row['id']; ?>"><button class="jbutton">APPLY</button></a>
+            <a href="jobApply.php?id=<?php echo $row['id']; ?>&user=<?php echo $user_id; ?>"><button class="jbutton">APPLY</button></a>
             <button class="jbutton">SAVE</button>
         </div>
         <?php

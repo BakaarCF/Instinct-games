@@ -17,13 +17,13 @@
     <div class="jobname" style="text-transform: uppercase;">Game designer</div>
     <button class="zorar" style="background-color:#30593D; color: white;"><span>Apply now </span></button>
     </div>
-        <div class="balahaa" style="margin-left: 10%; margin-top: 10%;">
+        <div class="balahaa" style="margin-left: 10%; margin-top: 10%;max-width: 55%;">
             <h2 style="text-transform: uppercase;"> company discription</h2>
             <p>Founded in 2011, Instinct Games is Egypt’s leading game development studio. Here at Instinct Games we aim to develop and produce  high quality games on all major platforms utilizing our competent team.</p>
             <p>Our dream is to build the video game development ecosystem in Egypt to set precedence  by creating unique high quality games with worldwide appeal.</p>
         </div>
 
-        <div class="jobdescr" style=" margin-left: 10%; margin-top: 40px;">
+        <div class="jobdescr" style=" margin-left: 10%; margin-top: 40px;max-width: 55%;">
             <h2 style="text-transform: uppercase;">Job description </h2>
             <p>Game designers create the concepts and worlds of video games.They are involved with the design of the genre, environment, story, characters, gameplay system, objectives and user experience of video games.<p>
             <br>
@@ -32,7 +32,7 @@
             <p>Game Designers establish the aesthetics, mood and look of the game which is integral to the game’s individual appeal and marketability.The user experience must always be considered during the development process, as players need to feel engaged and rewarded by the game to continue playing.</p>  
         </div>
             
-        <div class="qualifications" style=" margin-left: 10%; margin-top: 40px;">
+        <div class="qualifications" style=" margin-left: 10%; margin-top: 40px;max-width: 55%;">
             <h2 style="text-transform: uppercase;">Qualifications</h2>
             <p>While entry is open to non-graduates, preference is given to those with relevant degrees. A degree in graphic design is advantageous,although other art and design subjects will be accepted. A range of relevant postgraduate programmes are also available  in many higher education institutions.</p>
             <br>
@@ -40,7 +40,7 @@
             <br>
             <p>Vacancies for graphic designers attract strong competition so speculative applications are advisable.</p>
         </div>
-        <div class="skills" style=" margin-left: 10%; margin-top: 40px;">
+        <div class="skills" style=" margin-left: 10%; margin-top: 40px;max-width: 55%;">
             <h2 style="text-transform: uppercase; margin:5px auto;"> Skills Required</h2>
             <ul>
             <li style="color:black; margin-left: 45px;" >Excellent IT skills, especially with design and photo-editing software</li>
