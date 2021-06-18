@@ -1,3 +1,8 @@
+<?php
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,8 +34,8 @@
         <form class="contact" action="" method="post">
           <input type="text" name="name" class="text-box123" style ="border-radius: 10px;  ;" placeholder="Email" required>
           <input type="email" name="email" class="text-box123"style ="border-radius: 10px" placeholder="Subject" required>
-          <textarea name="message" rows="5"style ="border-radius: 10px" placeholder="Your Message" required></textarea>
-          <input type="submit" name="submit" class="send-btn"  value="Send">
+          <textarea name="message" rows="5"style ="border-radius: 10px" placeholder="Your Brief Message" required></textarea>
+          <input type="submit" name="submit" class="send-btn"  value="Send A Ticket">
         </form>
       </div>
     </div>

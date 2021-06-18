@@ -1,4 +1,5 @@
 <?php
+session_start();
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -68,6 +69,8 @@ include("includes/nav.php");
 </div>
 <h4 style="font-size: 24px; color: white; text-transform: uppercase; ">GAMEPLAY<h4>
     <br>
+    <input type="hidden" id="gamePlay" value="<?php echo $page['game_play']; ?>">
+    <input type="hidden" id="gameDesc" value="<?php echo $page['game_desc']; ?>">
 <p class="txt-rotate" style="color:#999; "></p>
     
 <div class="overview-history">
@@ -76,7 +79,7 @@ include("includes/nav.php");
   margin-top: 50px;">
 <div class="overview-history-videoo">
     <a href="<?php echo $page['video_link']; ?>"><img src="layouts/img/ArkLogo.png" style="vertical-align: middle;
-  border-style: none; width:105px; height:6%;" ><i class="far fa-play-circle"></i></a>
+  border-style: none; width:105px; height:6%;" ></a>
   <!-- <iframe width="1904" height="800" src="https://www.youtube.com/embed/5fIAPcVdZO8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 </div>
 <div class="overview-history-content">
