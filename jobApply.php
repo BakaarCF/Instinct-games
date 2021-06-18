@@ -157,7 +157,7 @@ include("includes/nav.php");
       <hr size="1" width="115%" color="#d4d4d4" style="margin-left:-80px;margin-top:10px;">    
       <div class="experience" style="margin-top:20px;">
         <h1 style="font-weight: bold; margin-top:10px; margin-left:4px">Experience</h1>
-         <button type="button" class="exbutton1" onclick="openForm2()" style="font-weight: bold;">+ Add</button>
+         <button type="button" class="exbutton4" onclick="openForm2()" style="font-weight: bold;">+ Add</button>
       </div>
      
         <div class="form-popup" id="myForm2" style="display: none; width: 100%;margin: 0 auto;">
