@@ -1,4 +1,5 @@
 <?php
+session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -150,16 +151,15 @@ if(isset($_POST['update'])) {
 	label {
 		background: #30593D;
 		text-align: center;
-		 
-		padding: 15px 50px;
+		padding: 15px ;
 		border-radius: 8px;
 		color: #fff;
 		cursor: pointer;
 		text-transform: uppercase;
-		 
+		width: 355px;
 		position:absolute;
-		right: 100px;
-		bottom: 25px;
+		right: 15px;
+		bottom: 27px;
 	}
 	
 	@media screen and (max-width: 600px) {
@@ -193,6 +193,7 @@ if(isset($_POST['update'])) {
 		<h1 class="ta-c heded" style="margin-top:20px; text-shadow:0 0 25px #30593D;">PROFILE</h1>
 		<div class="pwrapper">
 			<form action="MyProfile.php?id=<?php echo $user_id; ?>" method="POST" enctype="multipart/form-data">
+				
 				<div class="contact-form">
 					<div class="input-fields">
 						<input type="text" class="input" name="name" value="<?php echo $user['name']; ?> " autocomplete="off" placeholder="Name">

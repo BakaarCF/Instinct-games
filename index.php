@@ -1,17 +1,23 @@
+<?php
+  session_start();
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "instinct_games";
+  
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+
+  $sql = "SELECT * FROM pages";
+  $rows = mysqli_query($conn,$sql);
+
+  if(isset($_GET['signout'])) {
+    // session_unset();
+    session_destroy();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "instinct_games";
-    
-    $conn = mysqli_connect($servername,$username,$password,$dbname);
-
-    $sql = "SELECT * FROM pages";
-    $rows = mysqli_query($conn,$sql);
-  ?>
     
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -129,6 +135,8 @@ img {vertical-align: middle;}
 <body>
     
     <?php include("includes/nav.php");
+
+    
     ?>
     <div class="slideshow-container">
 
@@ -140,7 +148,7 @@ img {vertical-align: middle;}
 
 <div class="mySlides fade">
   
-  <img src="layouts/img/ARK2.jpg" style="width:100%;">
+  <img src="layouts/img/HomeArk.jpg" style="width:100%;">
   <div class="text"><b>Ark:Survival Evolved</b></div>
 </div>
 

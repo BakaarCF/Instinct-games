@@ -1,6 +1,6 @@
 <head>
    <?php
-   session_start();
+   // session_start();
    $servername = "localhost";
    $username = "root";
    $password = "";
@@ -61,6 +61,10 @@
 .dropdown-menu:hover .menu-content {
    display: block;
 }
+
+.dropdown-menu:hover .menu-content {
+   display: block;
+}
 .dropdown-menu:hover .menu-btn {
    background-color: #30593D;
 }
@@ -76,7 +80,16 @@
             <ul class="nav_links">
                 <li><a href="index.php">HOME</a></li>
                 <li><a href="news.php">NEWS</a></li>
-                <li><a href="MyProfile.php?id=<?php echo $_SESSION['user_id']; ?>">PROFILE</a></li>
+                <?php
+                  if(!empty($_SESSION['user_id'])) {
+                     $userID = $_SESSION['user_id'];
+                     print '
+                     <li><a href="MyProfile.php?id=<?php echo '.$userID.'; ?>">PROFILE</a></li>
+                     ';
+                  }
+                
+                ?>
+                
                 <li><a href="Aboutus.php">ABOUT</a></li>
                 <div class="dropdown-menu">
                <button class="menu-btn">GAMES <i class="fas fa-angle-down"></i></button>
@@ -90,7 +103,7 @@
                <a class="links-hidden" href="GamePage.php?id=<?php echo $row['id']; ?>"><?php echo $row['page_name']; ?></a>
                <?php } ?>
 
-</div>
+               </div>
 </div>
                 
                 <li><a href="Jobs.php">JOBS</a></li>
@@ -104,7 +117,17 @@
             <a href="signup.php"><input type="submit" class="Register-button" value="Regstier" name="submit"></a>
             ';
          } else {
-            echo "<b style='color: white;'>Welcome, ".$user['name']."</b>";
+            $rowID = $row['id'];
+            $rowName = $row['page_name'];
+            $userName = $user['name'];
+            echo "
+            <div class='dropdown-menu' style='margin: 0 auto'>
+            <button class='menu-btn'>".$userName."<i class='fas fa-angle-down'></i></button>
+            <div class='menu-content'>
+               <a class='links-hidden' styel='color:white' href='index.php?signout='>Log Out</a>
+            </div>
+            </div>
+            ";
          }
         
         ?>
