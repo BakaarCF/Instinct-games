@@ -119,15 +119,15 @@ include("includes/nav.php");
           </div>
         </div>
       </div>
-      <hr size="1" width="125%" color="#d4d4d4" style="margin-left:-80px;margin-bottom:20px;">  
+      <hr size="1" width="115%" color="#d4d4d4" style="margin-left:-80px;margin-bottom:20px;">  
       <h2 style="font-weight: bold; margin-left:5px;">Personal Information</h2>
       <div class="container" style="margin-right: 930px;">
       
-        <img style="width:180px;height:180px; margin-left:20px; margin-bottom:10px; border-radius:90%;" src="layouts/img/Users/<?php echo $user['image']; ?>">
+        <img style="width:160px;height:140px; margin-left:20px; margin-bottom:30px; border-radius:90%;" src="layouts/img/Users/<?php echo $user['image']; ?>">
             
           
-            <div  style=" margin-left: 210px; margin-top: -170px;">
-                <div class="col-md-8" style="margin-bottom:16px">
+            <div  style=" margin-left: 210px; margin-top: -180px;">
+                <div class="col-md-8" style="margin-bottom:22px">
                   <div class="panel panel-default">      
                     <div class="panel-body">
                           <div class="form-group form-group-inline">
@@ -146,19 +146,22 @@ include("includes/nav.php");
                             <label class="label-block">Mobile</label>
                             <input class="form-control form-control-inline" name="mobile" value="<?php echo $user['phone']; ?>" disabled/>
                           </div>
+                          
                     </div>
                   </div>
                 </div>
             </div>
-            
+            </div>
+            </div> 
       </div>
-      <hr size="1" width="75%" color="#d4d4d4" style="margin-left:300px;">  
-      <div class="experience">
-        <h1 style="font-weight: bold; margin-top:35px;">Experience</h1>
-        <button type="button" class="exbutton" onclick="openForm2()" style="font-weight: bold;">+  Add</button>
+      <hr size="1" width="115%" color="#d4d4d4" style="margin-left:-80px;margin-top:10px;">    
+      <div class="experience" style="margin-top:20px;">
+        <h1 style="font-weight: bold; margin-top:10px; margin-left:4px">Experience</h1>
+         <button type="button" class="exbutton4" onclick="openForm2()" style="font-weight: bold;">+ Add</button>
       </div>
-        <div class="form-popup" id="myForm2" style="display: none; width: 70%;margin: 0 auto;">
-          <div  style="background-color:whitesmoke; margin-left: 30px;" >
+     
+        <div class="form-popup" id="myForm2" style="display: none; width: 100%;margin: 0 auto;">
+          <div  style="background-color:whitesmoke; margin-left: 30px;  border-radius:25px;" >
               <div class="panel-body">
                 <div class="form-group form-group-inline">
                   <label class="label-block" required>Title </Label>
@@ -190,19 +193,17 @@ include("includes/nav.php");
                 </div>
               </div>
               
-                <button type="button" class="exbutton3"  onclick="closeForm2()">Save</button>
+                <button type="button" class="exbutton2"  onclick="closeForm2()">Save</button>
             </div>
         </div>  
 
-
-
-      <hr size="1" width="75%" color="#d4d4d4" style="margin-left:300px;">  
+        <hr size="1" width="115%" color="#d4d4d4" style="margin-left:-80px;margin-top:35px;">  
       <div class="experience">
-        <h1 style="font-weight: bold; margin-top:35px;">Education</h1>
-        <button type="button" class="exbutton" onclick="openForm()" style="font-weight: bold;">+  Add</button>
+        <h1 style="font-weight: bold; margin-top:30px;margin-left:4px">Education</h1>
+        <button type="button" class="exbutton4" onclick="openForm()" style="font-weight: bold;">+ Add</button>
       </div>
-        <div class="form-popup" id="myForm" style="display: none; width: 70%;margin: 0 auto;">
-          <div style="background-color:whitesmoke; margin-left: 30px;" >
+        <div class="form-popup" id="myForm" style="display: none; width: 102%;margin: 0 auto;">
+          <div style="background-color:whitesmoke; margin-left: 30px;border-radius:25px; " >
               <div class="panel-body">
                   <div class="form-group form-group-inline" style=" margin-bottom:11px;">
                     <label class="label-block">Institution</Label>
@@ -237,24 +238,20 @@ include("includes/nav.php");
                   </div>
                 </div>
               </div>
-              <button type="button" class="exbutton3"  onclick="closeForm()">Save</button>       
+              <button type="button" class="exbutton2"  onclick="closeForm()">Save</button>       
           </div>
         </div>    
       <div>
-      
-      <hr size="1" width="75%" color="#d4d4d4" style="margin-left: 300px; margin-top:10px">  
-      
+      <hr size="1" width="115%" color="#d4d4d4" style="margin-left:-80px; margin-top:5px;">  
       </div>
-      <hr size="1" width="75%" color="#d4d4d4" style="margin-left: 300px; margin-top:20px">  
     <div>
-    <div style="margin-top:40px;width: 70%;margin: 0 auto">
-        <h2 style="font-weight: bold; margin-bottom:20px;">Message to Hiring Manager</h2> 
-        <h5 style="margin-top:8px;">Let the company know about your interest working there.</h5>
-        <textarea name="message" class="text-box" rows="12" style=""></textarea>
+    <div style="margin-top:15px;width: 70%;">
+        <h2 style="font-weight: bold; margin-bottom:10px;">Message to Hiring Manager</h2> 
+        <h5 style="margin-top:-2px;">Let the company know about your interest working there.</h5>
+        <textarea name="message" class="text-box" rows="12"></textarea>
       </div>
-      <button class="exbutton2" name="apply" type="submit" style="font-weight: bold;">APPLY</button> 
-    </div>
-    
+      <hr size="1" width="125%" color="#d4d4d4" style="margin-left:-80px;margin-bottom:10px;">  
+      <button class="exbutton3" name="apply" type="submit" style="font-weight: bold;">APPLY</button>    
   </form>
 </div>
 </div>

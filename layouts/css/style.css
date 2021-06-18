@@ -907,7 +907,7 @@ color: #3d6b4b;
   width: 100%;
   margin: 0 auto;
   padding: 30px;
-  /* margin-left: 160px; */
+   margin-left: -20px; 
 }
 
 
@@ -1003,14 +1003,13 @@ color: #3d6b4b;
 /*****************************************************************************/
 #jobApply  .form-group-inline {
   display: inline-block;
-
 }
 
 
 #jobApply  .form-control-inline {
     min-width: 3;
     width: 390px;
-    display:inline-table;
+    display:flex;
     margin-left: 40px;
     height:20px;
 
@@ -1061,8 +1060,10 @@ color: #3d6b4b;
     #jobApply  .experience
     {
       display: flex;
+    
+      
     }
-    #jobApply  .exbutton
+    #jobApply .exbutton1
     {
       background-color: #ffffff; /* Green */
       border: 2px solid #000000;
@@ -1071,12 +1072,12 @@ color: #3d6b4b;
       text-decoration: none;
       display: inline;
       font-size: 16px;
-      margin: 40px 20px;
+      margin: 10px 10px;
       cursor: pointer;
       border-radius:25px;
-      margin-left: 850px;
+      margin-left: 63.5%;
     }
-    #jobApply   .exbutton2
+    #jobApply  .exbutton2
     {
       background-color: #000000; /* Green */
       border: 2px solid #ffffff;
@@ -1088,7 +1089,7 @@ color: #3d6b4b;
       margin: 40px 20px;
       cursor: pointer;
       border-radius:25px;
-      margin-left: 550px;
+      margin-left: 820px;
     }
     #jobApply .exbutton3
     {
@@ -1102,7 +1103,21 @@ color: #3d6b4b;
   margin: 40px 20px;
   cursor: pointer;
   border-radius:25px;
-  margin-left: 850px;
+  margin-left: 990px;
+    }
+    #jobApply .exbutton4
+    {
+      background-color: #ffffff; /* Green */
+      border: 2px solid #000000;
+      color: black;
+  padding: 6px 53px;
+  text-decoration: none;
+  display: inline;
+  font-size: 16px;
+  margin: 40px 20px;
+  cursor: pointer;
+  border-radius:25px;
+  margin-left: 65%;
     }
 
     
