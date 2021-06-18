@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +28,16 @@ function closeForm2() {
   color: black;">
 <?php include("includes/nav.php");
     ?>
+    <?php
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM users WHERE id = '$user_id'";
+$result = mysqli_query($conn, $sql);
+$user = mysqli_fetch_assoc($result);
+
+?>
+<div class="containerrrr">
+
+
     <div class="file-upload">
         <h2 style="font-weight: bold;"> Easy Apply</h2>
     <h5>Choose an option to autocomplete your application. You can still fill your profile manually.</h5>
@@ -47,29 +58,11 @@ function closeForm2() {
       <h2 style="font-weight: bold; margin-left: 190px;">Personal Information</h2>
       <div class="container" style="margin-right: 930px;">
         <div class="avatar-upload">
-            <div class="avatar-edit">
-                <input type='file' id="imageUpload"  style=" display: none;"accept=".png, .jpg, .jpeg" />
-                <label for="imageUpload" style="display: inline-block;
-                width: 34px;
-                height: 34px;
-                margin-bottom: 0;
-                border-radius: 100%;
-                background: #FFFFFF;
-                border: 1px solid transparent;
-                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-                cursor: pointer;
-                font-weight: normal;
- transition: all .2s ease-in-out;"></label>
-            </div>
-            <div class="avatar-preview">
-                <div id="imagePreview" style="background-image: url(layouts/img/images.jfif); width: 100%;
-                height: 100%;
-                border-radius: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: left;">
-                </div>
-            </div>
+            
+            
+            <img style="width:300px;height:300px; margin-left:20px;  border-radius:50%;" src="layouts/img/Users/<?php echo $user['image']; ?>">
+
+            
         </div>
     </div>
       <form  style=" margin-left: 160px; margin-top: -5px;">
@@ -78,40 +71,27 @@ function closeForm2() {
           <div class="panel panel-default">      
             <div class="panel-body">
               <div class="form-group form-group-inline">
-                <label class="label-block">First Name<span class="required" style="color:red;">*</span></label>
-                <input class="form-control form-control-inline form-control-medium"  />
-              </div>
-              <div class="form-group form-group-inline">
-                <label class="label-block">Last Name<span class="required" style="color:red;">*</span></label>
-                <input class="form-control form-control-inline"  />
+                <label class="label-block">Name</label>
+                <input class="form-control form-control-inline form-control-medium" value="<?php echo $user['name']; ?>" disabled/>
               </div>
               
               <div class="panel-body">
                 <div class="form-group form-group-inline">
-                  <label class="label-block">Email<span class="required" style="color:red;">*</span></Label>
-                  <input type="email" class="form-control form-control-inline form-control-medium"  />
-                </div>
-                <div class="form-group form-group-inline">
-                  <label class="label-block">Confirm your mail <span class="required" style="color:red;">*</span></label>
-                  <input class="form-control form-control-inline"  />
+                  <label class="label-block">Email</Label>
+                  <input type="email" class="form-control form-control-inline form-control-medium" value="<?php echo $user['email']; ?>" disabled/>
                 </div>
         
                 <div class="panel-body">
                   <div class="form-group form-group-inline">
-                    <label class="label-block">place your resdience <span class="required" style="color:red;">*</span></Label>
-                    <input class="form-control form-control-inline form-control-medium"  />
-                  </div>
-                  <div class="form-group form-group-inline">
-                    <label class="label-block">Mobile<span class="required" style="color:red;">*</span></label>
-                    <input class="form-control form-control-inline"/>
+                    <label class="label-block">Mobile</label>
+                    <input class="form-control form-control-inline" value="<?php echo $user['phone']; ?>" disabled/>
                   </div>
             </div>
           </div>
         </div>
       </form>
    
-</div>
-</div>
+
 <hr size="1" width="90%" color="#d4d4d4" style="margin-left:80px; margin-top:20px">  
 <div class="experience">
         <h1 style="font-weight: bold; margin-left: 190px; margin-top:35px;">Experience</h1>
@@ -202,54 +182,15 @@ function closeForm2() {
         </div>     
       </form>
       <hr size="1" width="90%" color="#d4d4d4" style="margin-left: 80px; margin-top:20px">  
-      <form  style=" margin-left: 160px; margin-top: -5px;">
-      <h1 style="font-weight: bold; margin-left:31px; margin-top:35px;">On the web</h1>
-      <div class="panel-body">
-        <div class="form-group form-group-inline">
-          <label class="label-block">LinkedIn</Label>
-          <input class="form-control form-control-inline form-control-medium"    />
-        </div>
-        <div class="form-group form-group-inline">
-          <label class="label-block">Facebook</label>
-          <input class="form-control form-control-inline"  />
-        </div>
-        
-        <div class="panel-body">
-          <div class="form-group form-group-inline">
-            <label class="label-block">Twitter</Label>
-            <input class="form-control form-control-inline form-control-medium"  />
-          </div>
-          <div class="form-group form-group-inline">
-            <label class="label-block">Website</label>
-            <input class="form-control form-control-inline"   />
-          </div>
-      </div>
-    </div>
-  </div>
-</form>
-<hr size="1" width="90%" color="#d4d4d4" style="margin-left: 80px; margin-top:20px">  
-<h1 style="font-weight: bold; margin-left: 190px;">Resume</h1>  
-<div class="file-upload">
-<div class="image-upload-wrap2">
-  <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-  <div class="drag-text2" style="margin-top: 10px;">
-    <h3>Browse resume or just drop it here</h3>
-  </div>
-</div>
-<div class="file-upload-content">
-  <img class="file-upload-image" src="#" alt="your image" />
-  <div class="image-title-wrap">
-    <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
-  </div>
-</div>
-</div>
-<hr size="1" width="90%" color="#d4d4d4" style="margin-left: 80px;">  
+      
+ 
 <h2 style="font-weight: bold; margin-left: 190px;">Message to Hiring Manager</h2> 
 <h5 style="margin-left: 190px; margin-top:8px;">Let the company know about your interest working there.</h5>
     <textarea name="message" class="text-box" rows="12" style="margin-left: 190px;"></textarea>
     <hr size="1" width="90%" color="#d4d4d4" style="margin-left: 80px;"> 
     <div>
       <button class="exbutton2" style="font-weight: bold;">Next</button> 
+    </div>
     </div>
   <?php include("includes/footer.php");
     ?>  

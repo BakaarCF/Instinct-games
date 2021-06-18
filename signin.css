@@ -6,7 +6,7 @@ body{
     font-family: sans-serif;
     
 }
-#sign .login-box{
+.login-box{
     width: 280px;
     position: absolute;
     top: 50%;
@@ -15,7 +15,7 @@ body{
     color: white;
 
 }
-#sign .login-box h1{
+.login-box h1{
     float:left;
     font-size: 40px;
     border-bottom: 6px solid #4caf50 ;
@@ -23,7 +23,7 @@ body{
     padding: 13px 0;
     
 }
-#sign .raheemismail{
+.textbox{
     width: 100%;
     overflow: hidden;
     font-size: 20px;
@@ -31,12 +31,12 @@ body{
     margin: 8px 0;
     border-bottom: 1px solid #4caf50 ;
 }
-#sign .raheemismail i{
+.textbox i{
     width: 26px;
     float: left;
     text-align: center;
 }
-#sign .raheemismail input{
+.textbox input{
     border:none;
     outline:none;
     background: none;
@@ -46,7 +46,7 @@ body{
     float: left;
     margin:0 10px
 }
-#sign .signin{
+.signin{
     width:100%;
     background:none;
     border: 2px solid #4caf50;
@@ -56,7 +56,7 @@ body{
     cursor:pointer;
     margin: 12px 0;
 }
-#sign .Raheem{
+.container{
     position: absolute;
     left: 0;
     top: 0;
@@ -68,22 +68,23 @@ body{
 }
 @keyframes animate{
     0%,100%{
-        background-image: url('layouts/img/img/2.jpg');
+        background-image: url('2.jpg');
     }
 
     75%{
-        background-image: url('layouts/img/img/Atlas7.jpg');
+        background-image: url('Atlas7.jpg');
 
     }
-        50%{
-            background-image: url('layouts/img/img/5.jpg');
+    
+    50%{
+        background-image: url('2.jpg');
 
-        }
-      
-        25%{
-            background-image: url('layouts/img/img/Atlas8.jpg');
+    }
+    
+    25%{
+        background-image: url('Atlas7.jpg');
 
-        }
+    }
 
 }
 

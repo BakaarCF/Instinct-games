@@ -1,5 +1,4 @@
 <?php
-session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -51,7 +50,7 @@ if(isset($_POST['update'])) {
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="layouts/css/style.css">
 	<script src="https://kit.fontawesome.com/b1361fb5d5.js" crossorigin="anonymous"></script>
-	<title>GamePage | Instinct Games</title>
+	<title>Profile | Instinct Games</title>
 	<link rel="icon" href="images/Bakaar.png" type="image/x-icon">
 	<style>
 	* {
