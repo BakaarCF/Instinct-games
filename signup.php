@@ -90,7 +90,7 @@ body{
         </div>
         <div class="textbox">
         <i class="fa fa-phone" aria-hidden="true"></i>
-            <input type="text" placeholder="Mobile" name="phone" value="" required>
+            <input type="tel" placeholder="Mobile" pattern="[0-9]{3}[0-9]{4}[0-9]{4}" name="phone" value="" required>
         </div>
         <div class="textbox">
         <i class="fa fa-lock" aria-hidden="true"></i>
