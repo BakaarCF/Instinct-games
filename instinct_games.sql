@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2021 at 03:21 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Generation Time: Jun 18, 2021 at 08:08 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -63,11 +63,19 @@ INSERT INTO `applied_jobs` (`id`, `user_id`, `resume`, `title`, `company`, `expe
 --
 
 CREATE TABLE `contact_us` (
-  `Id` int(11) NOT NULL,
+  `Id` int(11) UNSIGNED NOT NULL,
   `email` varchar(250) NOT NULL,
   `subject` text NOT NULL,
   `message` varchar(2500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`Id`, `email`, `subject`, `message`) VALUES
+(1, ' karim4995@hotmail.com', ' asd', 'asd'),
+(2, ' karim4995@hotmail.com', ' asd', 'ASD');
 
 -- --------------------------------------------------------
 
@@ -165,7 +173,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `user_name`, `name`, `email`, `password`, `phone`, `image`) VALUES
 (1, '18204204', 'Amr khaled', 'Amrkhaled6@hotmail.com', '123', '+01020324406', 'Web_Photo_Editor.jpg'),
-(2, '', '', '', '', '', ''),
 (3, 'OmarHafez', 'OmarHafez ', 'Omar@gmail.com', '123', '01022767470', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg');
 
 --
@@ -177,6 +184,12 @@ INSERT INTO `users` (`id`, `user_name`, `name`, `email`, `password`, `phone`, `i
 --
 ALTER TABLE `applied_jobs`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  ADD PRIMARY KEY (`Id`);
 
 --
 -- Indexes for table `pages`
@@ -214,6 +227,12 @@ ALTER TABLE `applied_jobs`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  MODIFY `Id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
@@ -235,7 +254,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
