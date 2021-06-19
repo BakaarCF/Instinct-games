@@ -22,7 +22,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="layouts/css/x.css">
+    
     <link rel="stylesheet" href="layouts/css/style.css">
     <title>News</title>
     <style>
@@ -35,8 +35,29 @@
     font-size: 45px;
     margin-bottom: 80px;
     margin-right:80px;
-    
     }
+        @import url(https://fonts.googleapis.com/css?family=Raleway);
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f9f9f9;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-title{
+  color: #2d2d2d;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.7em 0;
+}
 </style>
     <div class="Styler1">
     <h1 style="font-size:75px;margin-top:130px;">Upcoming <span style="color:#2F5F27;">Games</span></h1>
@@ -50,9 +71,9 @@
     foreach($rowss as $game){
     
     ?>
-<div class="containerr">
+<div class="news-containerr">
 
-  <div class="content">
+  <div class="news-content">
     <a href="<?php echo $game['link'];?>" target="_blank">
       <div class="content-overlay"></div>
       <img class="content-image" src="<?php echo $game['img'];  ?>">
