@@ -28,24 +28,19 @@
         $images = $_POST['images'];
         for ($z = 0; $z < $images; $z++) {
             // $filename = rand() . $_FILES['image' . $z]['name'];
+            $filename = $_FILES["image" . $z]["name"];
 
             $destination = '../layouts/' . $filename;
 
             $target_file = $destination . basename($_FILES["image" . $z]["name"]);
 
-            $filename = $_FILES["image" . $z]["name"];
+            
 
             $uploadOk = 1;
 
             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-            if($check !== false) {
-                echo "File is an image";
-                $uploadOk = 1;
-            } else {
-                echo "File is not an image.";
-                $uploadOk = 0;
-            }
+            
 
             $file = $_FILES['image' . $z]['tmp_name'];
             $size = $_FILES['image' . $z]['size'];
@@ -54,7 +49,7 @@
                 echo '<script>alert("File Too Large")</script>';
             } else {
                 if (move_uploaded_file($file, $destination)) {
-                    $ins = "INSERT INTO `page_images` (`id`, `page_id`, `image`) VALUES (NULL, '$game_id', '$filename')";
+                    $ins = "INSERT INTO `page_images` (`id`, `page_id`, `image`) VALUES (NULL, '$game_id', 'image/$filename')";
                     mysqli_query($conn, $ins);
                 } else {
                     echo '<script>alert("Failed To Upload Image")</script>';
@@ -64,12 +59,14 @@
 
         if (mysqli_query($conn, $sql)) {
             print " <script> alert('Game Added!') </script>";
-            header("Location:index.php");
+            header("Location:index.html");
 
         } else {
             echo "<P color:RED>Error</p> deleting record: " . $conn->error;
         }
     }
+
+        
 
 ?>
 <!DOCTYPE html>

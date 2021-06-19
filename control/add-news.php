@@ -25,7 +25,7 @@
             // $filename = rand() . $_FILES['image' . $z]['name'];
             $filename = $_FILES["image" . $z]["name"];
 
-            $destination = '../layouts/' . $filename;
+            $destination = '../layouts/img' . $filename;
 
             $target_file = $destination . basename($_FILES["image" . $z]["name"]);
 
@@ -52,7 +52,7 @@
             }
         }
       
-$sql  = "INSERT INTO `news` (`name`, `descripton`, `link`,`img`) VALUES ( '$name', '$description', '$link','img/$filename')";
+        $sql  = "INSERT INTO `news` (`name`, `descripton`, `link`,`img`) VALUES ( '$name', '$description', '$link','img/$filename')";
         if (mysqli_query($conn, $sql)) {
             echo " <script> alert('News Added!') </script>";
           

@@ -24,7 +24,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="layouts/css/style.css">
-    <title>News</title>
+    <title>News | Instinct Games</title>
+    <link rel="icon" href="images/Bakaar.png" type="image/x-icon">
     <style>
     .Styler1{
     background-color: black;
@@ -60,7 +61,7 @@ body{
 }
 </style>
     <div class="Styler1">
-    <h1 style="font-size:75px;margin-top:130px;">Upcoming <span style="color:#2F5F27;">Games</span></h1>
+    <h1 style="font-size:75px;margin-top:130px;">Upcoming <span style="color:#30593D;">Games</span></h1>
 </div>
 
 </head>

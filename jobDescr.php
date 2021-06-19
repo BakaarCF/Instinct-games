@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="job descr.css">
+    <link rel="stylesheet" href="layouts/css/style.css">
     <title>JobsDescription | Instinct Games</title>
     <link rel="icon" href="images/Bakaar.png" type="image/x-icon">
 </head>
@@ -13,7 +13,7 @@
     <?php include("includes/nav.php")?>
 
     <div class="job">
-    <img class="bee" src="download.jpg" alt="no image">
+    <img class="bee" src="layouts/img/download.jpg" alt="no image">
     <div class="jobname" style="text-transform: uppercase;">Game designer</div>
     <button class="zorar" style="background-color:#30593D; color: white;"><span>Apply now </span></button>
     </div>

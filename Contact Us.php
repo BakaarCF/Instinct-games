@@ -10,19 +10,18 @@
       $name = $_POST['email'];
       $email = $_POST['subject'];
       $message = $_POST['message'];
-
       $conn = mysqli_connect($servername,$username,$password,$dbname);
-      $sql = "INSERT INTO contact_us (id,email,subject,message) VALUES (null,' $name', ' $email', '$message')";
-      if (mysqli_query($conn, $sql)) 
-      {
+
+      $sql = "INSERT INTO contact_us (id,email,subject,message) VALUES (Null,' $name', ' $email', '$message')";
+
+      if (mysqli_query($conn, $sql)) {
+        echo " <script> alert('Message delivered!') </script>";
         
-          header("Location:Contact Us.php");
-        
-      }
-       else 
-       {
-          echo "<P color:RED>Error</p> deleting record: " . $conn->error;
-      }
+      
+
+    } else {
+        echo "<P color:RED>Error</p> deleting record: " . $conn->error;
+    }
   }
 
 ?>

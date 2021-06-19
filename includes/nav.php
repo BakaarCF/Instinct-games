@@ -79,7 +79,7 @@
         <nav>
             <ul class="nav_links">
                 <li><a href="index.php">HOME</a></li>
-                <li><a href="news.php">NEWS</a></li>
+                <li><a href="news1.php">NEWS</a></li>
                 <?php
                   if(!empty($_SESSION['user_id'])) {
                      $userID = $_SESSION['user_id'];
@@ -114,7 +114,7 @@
          if(empty($_SESSION['user_id'])) {
             print '
             <a href="signin.php"><input type="submit" class="button" value="Log in" name="submit"></a>
-            <a href="signup.php"><input type="submit" class="Register-button" value="Regstier" name="submit"></a>
+            <a href="signup.php"><input type="submit" class="Register-button" value="Register" name="submit"></a>
             ';
          } else {
             $rowID = $row['id'];
