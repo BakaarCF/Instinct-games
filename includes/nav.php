@@ -26,7 +26,6 @@
    padding: 16px;
    font-family:  "Montserrat",sans-serif;;
    border: none;
-
 }
 .dropdown-menu {
    position: relative;
@@ -78,7 +77,6 @@
             </a>
         </div>
         <nav>
-            
             <ul class="nav_links">
                 <li><a href="index.php">HOME</a></li>
                 <li><a href="news.php">NEWS</a></li>
@@ -112,10 +110,6 @@
                 <li><a href="Contact Us.php">CONTACT US</a></li>
             </ul>
         </nav>
-<<<<<<< HEAD
-         <input type="submit" class="button"onclick="document.location='signin.php'" value="Log in" name="submit">
-         <input type="submit" class="button1" onclick="document.location='regesteration.php'" value="Register" name="submit">
-=======
         <?php
          if(empty($_SESSION['user_id'])) {
             print '
@@ -138,7 +132,6 @@
         
         ?>
          
->>>>>>> 1f6340ed319c79d76ca9c56a400d4090c285cbb5
     </header>
     </html>
      
