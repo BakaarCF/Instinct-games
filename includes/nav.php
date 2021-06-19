@@ -84,7 +84,7 @@
                   if(!empty($_SESSION['user_id'])) {
                      $userID = $_SESSION['user_id'];
                      print '
-                     <li><a href="MyProfile.php?id=<?php echo '.$userID.'; ?>">PROFILE</a></li>
+                     <li><a href="MyProfile.php?id='.$userID.'">PROFILE</a></li>
                      ';
                   }
                 

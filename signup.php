@@ -1,9 +1,6 @@
 <?php
     session_start(); 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "instinct_games";
+    include("classes/User.php");
 
     if(isset($_POST['signup']))
     {
@@ -12,14 +9,7 @@
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $passwordd = $_POST['password'];
-
-        $conn = mysqli_connect($servername,$username,$password,$dbname);
-        $sql = "INSERT INTO users (id,user_name,name,email,phone,password) VALUES (NULL,'$usernamee', '$name', '$email','$phone','$passwordd')";
-        if (mysqli_query($conn, $sql)) {
-            header("Location:signin.php");
-        } else {
-            echo "<P color:RED>Error</p> deleting record: " . $conn->error;
-        }
+        User::addUser($_POST);
     }
 
 ?>

@@ -1,4 +1,30 @@
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "instinct_games";
 
+    if(isset($_POST['add']))
+    {
+        $jobname = $_POST['jobname'];
+        $location = $_POST['location'];
+        
+    
+        $conn = mysqli_connect($servername,$username,$password,$dbname);
+        $sql  = "INSERT INTO `roles` (`id`, `job`, `location`) VALUES (NULL, '$jobname', '$location')";
+
+
+        
+        if (mysqli_query($conn, $sql)) {
+            print " <script> alert('Job Added!') </script>";
+            header("Location:index.html");
+
+        } else {
+            echo "<P color:RED>Error</p> deleting record: " . $conn->error;
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -361,55 +387,66 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Contact Us</h1>
-                    <style>  
-    .login-panel {  
-        margin-top: 150px;  
-    }  
-    .table {  
-        margin-top: 50px;
-        text-align:center;  
-     }  
-</style>    
-<div class="table-scrol">  
-    <h1 align="center">All Messages</h1>   
-<div class="table-responsive"><!--this is used for responsive display in mobile and other devices-->  
-    <table class="table table-bordered table-hover table-striped" style="table-layout:absolute">  
-        <thead>  
-        <tr>  
-            <th>Email Id</th>  
-            <th>Email</th>  
-            <th>Subject</th>
-            <th>Message</th>
-         
-        </tr>  
-        </thead>  
-        <?php  
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "instinct_games";
-        $conn = mysqli_connect($servername,$username,$password,$dbname);
-        $view_users_query="select * from contact_us";//select query for viewing users.  
-        $run=mysqli_query($conn,$view_users_query);//here run the sql query.
-        while($row=mysqli_fetch_array($run))//while look to fetch the result and store in a array $row.  
-        {  
-            $id=$row[0];
-            $name=$row[1]; 
-            $email=$row[2];
-            $message=$row[3];    
-        ?>    
-        <tr>            
-            <td><?php echo $id;  ?></td> 
-            <td><?php echo $name;  ?></td>  
-            <td><?php echo $email;  ?></td> 
-            <td><?php echo $message;  ?></td>        
-        </tr>  
-        <?php } 
-        ?>  
-    </table>  
-        </div>  
-</div>
+                    
+                    <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block"></div>
+                            <div class="col-lg-12">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Add New Job!</h1>
+                                    </div>
+                                    <form class="user" action="Add-jobs.php" method="POST" enctype="multipart/form-data">
+                                        
+                                        
+                                    <div class="row">
+                                        <div class="form-group col-lg-2">
+                                            <input type="text" class="form-control form-control-user "
+                                                name="jobname" aria-describedby="emailHelp"
+                                                placeholder="Enter JobName...">
+                                        </div>
+                                        <div class="form-group col-lg-2">
+                                            <input type="text" class="form-control form-control-user "
+                                                name="location" aria-describedby="emailHelp"
+                                                placeholder="Enter Location...">
+                                        </div>
+                                        
+                                    </div>
+                                    
+												
+
+											</div>
+										</div>
+                                        <div class="row">
+											<div class="col-sm-12">
+												<div class="form-group" id="containert"> </div>
+											</div>
+										</div>
+                                        <!-- <div class="form-group">
+                                            <input type="file" class="form-control form-control-user "
+                                                name="release_date" aria-describedby="emailHelp"
+                                                placeholder="Enter Release Date...">
+                                        </div> -->
+                                        <a href="index.html" >
+                                            <button type="submit" class="btn btn-primary btn-user btn-block btn-sm" name="add">Add Job </button>
+                                        </a>
+                                        <hr>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
                 </div>
                 <!-- /.container-fluid -->
 
