@@ -8,10 +8,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="layouts/css/style.css">
     
+<<<<<<< HEAD
+    <title>News</title>
+=======
     <title>News | Instinct Games </title>
+>>>>>>> 1f6340ed319c79d76ca9c56a400d4090c285cbb5
 </head>
+
+<body style="background-color:black;">
+
+
+<?php include("includes/nav.php")?>
+<main>
+
 <style>
-.bahgat{
+.Styler1{
     background-color: black;
     position: relative;
     color: white;
@@ -23,10 +34,10 @@
 }
 .containe{
     background-color: black;
-    border: 3px solid #30593D;
-    border-radius: 10px;
-    height: 450px;
-    width: 600px;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    height: 650px;
+    width: 500px;
     position: relative;
     margin-top: 120px;
     margin-left: 300px;
@@ -46,20 +57,24 @@ h3{
 h1{
     text-align: center;
     position: relative;
-    margin-top: 10px;
+    margin-top: 3px;
     
 
 }
 .container1{
     background-color: black;
-    border: 3px solid #30593D;
-    border-radius: 10px;
-    height: 450px;
-    width: 600px;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    height: 650px;
+    width: 500px;
     position: relative;
     top: -450px;
     margin-left: 1000px;
 }
+<<<<<<< HEAD
+
+
+=======
 .container2{
     background-color: black;
     border: 3px solid #30593D;
@@ -82,6 +97,7 @@ h1{
     margin-top: -450px;
     margin-left: 1000px;
 }
+>>>>>>> 1f6340ed319c79d76ca9c56a400d4090c285cbb5
 .soura1{
     margin-left: 70px;
     margin-top: 80px;
@@ -93,7 +109,7 @@ h1{
  .button30
  {
     
-  background-color: #30593D;
+  background-color: #FFFFFF;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -108,19 +124,67 @@ h1{
  
 </style>
 
-<body style="background-color:black;">
-<?php include("includes/nav.php")?>
 
-<div class="bahgat">
-    <h1 style="font-size:80px;">RECENTS EVENTS &<br>ANNOUNCMENTS</h1>
+<div class="Styler1">
+    <h1 style="font-size:65px;">Upcoming Games</h1>
 </div>
 <div class="containe">
     <h1>ATLAS</h1>
-    <h3>TRADE WINDS UPDATE INSTRUCTIONS FOR PRIVATE SERVERS!</h3>
-    <img class="soura" src="173-1739047_atlas-game-xbox-one.jpg" height="200" width="450" />
+    <h3>A massively multiplayer first-and-third-person fantasy pirate adventure. ATLAS will host up to 40,000 players exploring the same Globe simultaneously, with an unprecedented scale of cooperation and conflict!</h3>
+    <img class="soura" src="173-1739047_atlas-game-xbox-one.jpg" height="300" width="350" />
     
 </div>
 <div class="container1">
+<<<<<<< HEAD
+    <h1>ARK SURVIVAL EVOLVED</h1>
+    <h3>As a man or woman stranded naked, freezing & starving on a mysterious island, you must hunt, harvest, craft items, grow crops, & build shelters to survive. Use skill and cunning to kill or tame & ride the Dinosaurs & primeval creatures roaming the land, & team up with hundreds of players or play locally!</h3>
+    <img class="soura1" src="apps.58949.14571142807322667.df9fc94b-3bd3-4ec2-b7a2-423331d84b17.jfif" height="300" width="350" />
+    
+</div>
+
+
+<div class="Styler1">
+      
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=======
     <h1>ATLAS</h1>
     <h3>PATCH 523.8 - LAND CLAIM CHANGES AND OTHER IMPROVEMENTS</h3>
     <img class="soura1" src="apps.58949.14571142807322667.df9fc94b-3bd3-4ec2-b7a2-423331d84b17.jfif" height="200" width="450" />
@@ -144,6 +208,7 @@ h1{
 <button class="button30">3</button>
 <button class="button30">4</button>
 <i class="fas fa-arrow-right"></i>
+>>>>>>> 1f6340ed319c79d76ca9c56a400d4090c285cbb5
 
 
 </div>
