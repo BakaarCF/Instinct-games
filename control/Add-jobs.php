@@ -434,7 +434,7 @@
                                                 placeholder="Enter Release Date...">
                                         </div> -->
                                         <a href="index.html" >
-                                            <button type="submit" class="btn btn-primary btn-user btn-block btn-sm" name="add">Add Job </button>
+                                            <button type="submit" class="btn btn-primary btn-user btn-block" name="add">Add Job </button>
                                         </a>
                                         <hr>
                                     </form>
