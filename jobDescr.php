@@ -15,7 +15,7 @@
     <div class="job">
     <img class="bee" src="layouts/img/download.jpg" alt="no image">
     <div class="jobname" style="text-transform: uppercase;">Game designer</div>
-    <button class="zorar" style="background-color:#30593D; color: white;"><span>Apply now </span></button>
+    <!-- <button class="zorar" style="background-color:#30593D; color: white;"><span>Apply now </span></button> -->
     </div>
         <div class="balahaa" style="margin-left: 10%; margin-top: 10%;max-width: 55%;">
             <h2 style="text-transform: uppercase;"> company discription</h2>
