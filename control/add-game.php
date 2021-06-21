@@ -264,7 +264,7 @@
                                                 name="release_date" aria-describedby="emailHelp"
                                                 placeholder="Enter Release Date...">
                                         </div> -->
-                                        <a href="index.html" >
+                                        <a href="add-game.php" >
                                             <button type="submit" class="btn btn-primary btn-user btn-block" name="add">Add Game </button>
                                         </a>
                                         <hr>

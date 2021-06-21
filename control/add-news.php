@@ -221,7 +221,7 @@
 											</div>
 										</div>
                                         
-                                        <a href="index.html" >
+                                        <a href="add-news" >
                                             <button type="submit" class="btn btn-primary btn-user btn-block" name="add">Add News </button>
                                         </a>
                                         <hr>
