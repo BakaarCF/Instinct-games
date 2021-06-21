@@ -39,7 +39,7 @@ include("includes/nav.php");
         while($row = mysqli_fetch_assoc($resultt)) {
         ?>
         <div class="jcards">
-            <h3><a href="jobDescr.php"><?php echo $row['job']; ?></a></h3>
+            <h3><a href="job descr.php"><?php echo $row['job']; ?></a></h3>
             <p> <i class="fas fa-map-marker-alt"></i> <?php echo $row['location']; ?></p>
             <a href="jobApply.php?id=<?php echo $row['id']; ?>&user=<?php echo $user_id; ?>"><button class="jbutton">APPLY</button></a>
             <button class="jbutton">SAVE</button>

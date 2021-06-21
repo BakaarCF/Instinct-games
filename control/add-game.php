@@ -28,19 +28,24 @@
         $images = $_POST['images'];
         for ($z = 0; $z < $images; $z++) {
             // $filename = rand() . $_FILES['image' . $z]['name'];
-            $filename = $_FILES["image" . $z]["name"];
 
             $destination = '../layouts/' . $filename;
 
             $target_file = $destination . basename($_FILES["image" . $z]["name"]);
 
-            
+            $filename = $_FILES["image" . $z]["name"];
 
             $uploadOk = 1;
 
             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-            
+            if($check !== false) {
+                echo "File is an image";
+                $uploadOk = 1;
+            } else {
+                echo "File is not an image.";
+                $uploadOk = 0;
+            }
 
             $file = $_FILES['image' . $z]['tmp_name'];
             $size = $_FILES['image' . $z]['size'];
@@ -49,7 +54,7 @@
                 echo '<script>alert("File Too Large")</script>';
             } else {
                 if (move_uploaded_file($file, $destination)) {
-                    $ins = "INSERT INTO `page_images` (`id`, `page_id`, `image`) VALUES (NULL, '$game_id', 'image/$filename')";
+                    $ins = "INSERT INTO `page_images` (`id`, `page_id`, `image`) VALUES (NULL, '$game_id', '$filename')";
                     mysqli_query($conn, $ins);
                 } else {
                     echo '<script>alert("Failed To Upload Image")</script>';
@@ -59,14 +64,12 @@
 
         if (mysqli_query($conn, $sql)) {
             print " <script> alert('Game Added!') </script>";
-            header("Location:index.html");
+            header("Location:index.php");
 
         } else {
             echo "<P color:RED>Error</p> deleting record: " . $conn->error;
         }
     }
-
-        
 
 ?>
 <!DOCTYPE html>
@@ -80,7 +83,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Instinct-Games</title>
+    <title>SB Admin 2 - Blank</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -106,7 +109,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Instinct-Games</div>
+                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
             </a>
 
             <!-- Divider -->
@@ -180,11 +183,10 @@
                 <div id="collapsePages" class="collapse show" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        
-                        <a class="collapse-item" href="Add-jobs.php">Add-Jobs</a>
-                        <a class="collapse-item" href="add-game.php">Add-Game</a>
-                        <a class="collapse-item" href="add-news.php">Add-News</a>
-                        <a class="collapse-item" href="contact_us.php">Contact-Us</a>
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
                         <a class="collapse-item" href="404.html">404 Page</a>

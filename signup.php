@@ -1,6 +1,9 @@
 <?php
     session_start(); 
-    include("classes/User.php");
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "instinct_games";
 
     if(isset($_POST['signup']))
     {
@@ -9,7 +12,14 @@
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $passwordd = $_POST['password'];
-        User::addUser($_POST);
+
+        $conn = mysqli_connect($servername,$username,$password,$dbname);
+        $sql = "INSERT INTO users (id,user_name,name,email,phone,password) VALUES (NULL,'$usernamee', '$name', '$email','$phone','$passwordd')";
+        if (mysqli_query($conn, $sql)) {
+            header("Location:signin.php");
+        } else {
+            echo "<P color:RED>Error</p> deleting record: " . $conn->error;
+        }
     }
 
 ?>
@@ -80,7 +90,7 @@ body{
         </div>
         <div class="textbox">
         <i class="fa fa-phone" aria-hidden="true"></i>
-            <input type="tel" placeholder="Mobile" pattern="[0-9]{3}[0-9]{4}[0-9]{4}" name="phone" value="" required>
+            <input type="text" placeholder="Mobile" name="phone" value="" required>
         </div>
         <div class="textbox">
         <i class="fa fa-lock" aria-hidden="true"></i>

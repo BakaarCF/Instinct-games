@@ -1,28 +1,5 @@
 <?php
-  session_start(); 
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "instinct_games";
-
-  if(isset($_POST['submit']))
-  {
-      $name = $_POST['email'];
-      $email = $_POST['subject'];
-      $message = $_POST['message'];
-      $conn = mysqli_connect($servername,$username,$password,$dbname);
-
-      $sql = "INSERT INTO contact_us (id,email,subject,message) VALUES (Null,' $name', ' $email', '$message')";
-
-      if (mysqli_query($conn, $sql)) {
-        echo " <script> alert('Message delivered!') </script>";
-        
-      
-
-    } else {
-        echo "<P color:RED>Error</p> deleting record: " . $conn->error;
-    }
-  }
+session_start();
 
 ?>
 
@@ -55,8 +32,8 @@
       <i class="far fa-envelope-open" style = "font-size: 40px; margin-left:323px; color:white;"></i>
           <h2 style="margin-top:20px; color: white;">Drop Us A Message </h2>
         <form class="contact" action="" method="post">
-          <input type="email" name="email" class="text-box123" style ="border-radius: 10px;  ;" placeholder="Email" required>
-          <input type="text" name="subject" class="text-box123"style ="border-radius: 10px" placeholder="Subject" required>
+          <input type="text" name="name" class="text-box123" style ="border-radius: 10px;  ;" placeholder="Email" required>
+          <input type="email" name="email" class="text-box123"style ="border-radius: 10px" placeholder="Subject" required>
           <textarea name="message" rows="5"style ="border-radius: 10px" placeholder="Your Brief Message" required></textarea>
           <input type="submit" name="submit" class="send-btn"  value="Send A Ticket">
         </form>

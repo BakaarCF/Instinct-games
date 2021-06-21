@@ -1,44 +1,40 @@
 <?php
 session_start();
-include("classes/User.php");
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "instinct_games";
+
+$conn = mysqli_connect($servername,$username,$password,$dbname);
 
 if(isset($_GET['id'])) {
 	$user_id = $_GET['id'];
-
-	$user = User::viewSpecficUser($user_id);
+	$sql = "SELECT * FROM users WHERE id = '$user_id'";
+    $result = mysqli_query($conn, $sql);
+	$user = mysqli_fetch_assoc($result);
 } else {
 	die("Not Logged In");
 }
 
 if(isset($_POST['update'])) {
-
-
-	
 	$user_id = $_GET['id'];
 	$username = $_POST['username'];
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 	$phone = $_POST['phoneno'];
-	$image = $_FILES['image'];
-
-	
 
 	$filename = $_FILES["image"]["name"];
     $tempname = $_FILES["image"]["tmp_name"]; 
 	$folder = "layouts/img/Users/".$filename;
-	move_uploaded_file($tempname, $folder);
-	User::updateUser($_POST,$user_id,$filename);
 
-
-
-	// if (move_uploaded_file($tempname, $folder))  {
-	// 	$sql = "UPDATE users SET user_name='$username', name='$name', email='$email' , password='$password' , phone='$phone' , image='$filename' WHERE id='$user_id'";
-    // 	mysqli_query($conn, $sql);
-	// } else {
-	// 	$sql = "UPDATE users SET user_name='$username', name='$name', email='$email' , password='$password' , phone='$phone' , image='$filename' WHERE id='$user_id'";
-    // 	mysqli_query($conn, $sql);
-	// }
+	if (move_uploaded_file($tempname, $folder))  {
+		$sql = "UPDATE users SET user_name='$username', name='$name', email='$email' , password='$password' , phone='$phone' , image='$filename' WHERE id='$user_id'";
+    	mysqli_query($conn, $sql);
+	} else {
+		$sql = "UPDATE users SET user_name='$username', name='$name', email='$email' , password='$password' , phone='$phone' , image='$filename' WHERE id='$user_id'";
+    	mysqli_query($conn, $sql);
+	}
 
 	
 }
