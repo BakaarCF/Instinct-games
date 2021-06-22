@@ -1,4 +1,17 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "instinct_games";
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+if(isset($_GET['delete'])) {
+    $contact_id = $_GET['delete'];
 
+    $sql = "DELETE FROM contact_us WHERE id='$contact_id'";
+    mysqli_query($conn,$sql);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -107,7 +120,7 @@
             <th>Email</th>  
             <th>Subject</th>
             <th>Message</th>
-         
+            <th>Actions</th>
         </tr>  
         </thead>  
         <?php  
@@ -129,7 +142,11 @@
             <td><?php echo $id;  ?></td> 
             <td><?php echo $name;  ?></td>  
             <td><?php echo $email;  ?></td> 
-            <td><?php echo $message;  ?></td>        
+            <td><?php echo $message;  ?></td>
+            <td><div class="form-group">
+													
+                <input type="button" onclick="window.location='contact_us.php?delete=<?php echo $id; ?>'" name="addd" class="form-control btn btn-block btn-primary btn-sm" placeholder="" value="Mark As Viewed">
+            </div></td>       
         </tr>  
         <?php } 
         ?>  

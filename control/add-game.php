@@ -30,13 +30,17 @@
         for ($z = 0; $z < $images; $z++) {
             // $filename = rand() . $_FILES['image' . $z]['name'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             $filename = $_FILES["images" . $z]["name"];
 >>>>>>> d3e8d18d80645606ca4cff34a46af5528c47b3cb
+=======
+            $filename = $_FILES["image" . $z]["name"];
+>>>>>>> 4e41cc9be7130709126fd2282dca3170da88d26c
 
             $destination = '../layouts/img/' . $filename;
 
-            $target_file = $destination . basename($_FILES["images" . $z]["name"]);
+            $target_file = $destination . basename($_FILES["image" . $z]["name"]);
 
             $filename = $_FILES["image" . $z]["name"];
 
@@ -52,10 +56,10 @@
                 $uploadOk = 0;
             }
 
-            $file = $_FILES['images' . $z]['tmp_name'];
-            $size = $_FILES['images' . $z]['size'];
+            $file = $_FILES['image' . $z]['tmp_name'];
+            $size = $_FILES['image' . $z]['size'];
 
-            if ($_FILES['images' . $z]['size'] > 1000000) {
+            if ($_FILES['image' . $z]['size'] > 1000000) {
                 echo '<script>alert("File Too Large")</script>';
             } else {
                 
@@ -69,6 +73,7 @@
         }
 
         if (mysqli_query($conn, $sql)) {
+            
             print " <script> alert('Game Added!') </script>";
 <<<<<<< HEAD
             header("Location:index.php");
@@ -286,9 +291,9 @@
                                                 name="release_date" aria-describedby="emailHelp"
                                                 placeholder="Enter Release Date...">
                                         </div> -->
-                                        <a href="add-game.php" >
+                                        <!-- <a href="add-game.php" > -->
                                             <button type="submit" class="btn btn-primary btn-user btn-block" name="add">Add Game </button>
-                                        </a>
+                                        <!-- </a> -->
                                         <hr>
                                     </form>
                                 </div>

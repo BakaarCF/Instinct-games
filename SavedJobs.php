@@ -6,21 +6,13 @@ $password = "";
 $dbname = "instinct_games";
 
 $conn = mysqli_connect($servername,$username,$password,$dbname);
-
-$count = "SELECT count(id) AS cnt FROM roles";
+$user_id = $_SESSION['user_id'];
+$count = "SELECT count(id) AS cnt FROM saved_jobs WHERE user_id='$user_id'";
 $rowCount = mysqli_query($conn,$count);
 $Countt = mysqli_fetch_assoc($rowCount);
 
-$sqll = "SELECT * FROM roles";
+$sqll = "SELECT * FROM saved_jobs WHERE user_id='$user_id'";
 $resultt = mysqli_query($conn,$sqll);
-
-if(isset($_GET['save'])) {
-    $save_id = $_GET['save'];
-    $user_id = $_SESSION['user_id'];
-    $saveSql = "INSERT INTO `saved_jobs` (`id`, `user_id`, `role_id`) VALUES (NULL, '$user_id', '$save_id')";
-    mysqli_query($conn,$saveSql);
-    header("location: SavedJobs.php");
-}
 
 ?>
 <!DOCTYPE html>
@@ -36,21 +28,28 @@ if(isset($_GET['save'])) {
 </head>
 <body style="background-image: url('layouts/img/BG.png');">
 <?php 
+
 include("includes/nav.php");
     ?>
 <h3 style="font-weight: bold; color: #F9F9F9; font-size:38.25px;text-align: center; margin:35px; ">
-    <span><?php echo $Countt['cnt']; ?> Open Positions</span>
+    <span><?php echo $Countt['cnt']; ?> Saved Jobs</span>
 </h3>
 <div class="jcontainer">
     <div class="jrow">
         <?php
         while($row = mysqli_fetch_assoc($resultt)) {
+            $role_id = $row['role_id'];
+            $sqlll = "SELECT * FROM roles WHERE id='$role_id' LIMIT 1";
+            $resulttt = mysqli_query($conn,$sqlll);
+            $job = $resulttt->fetch_assoc();
+            // $job = mysql_fetch_row($resulttt);
         ?>
+
         <div class="jcards">
-            <h3><a href="job descr.php"><?php echo $row['job']; ?></a></h3>
-            <p> <i class="fas fa-map-marker-alt"></i> <?php echo $row['location']; ?></p>
+            <h3><a href="jobDescr.php"><?php echo $job['job']; ?></a></h3>
+            <p> <i class="fas fa-map-marker-alt"></i> <?php echo $job['location']; ?></p>
             <a href="jobApply.php?id=<?php echo $row['id']; ?>&user=<?php echo $user_id; ?>"><button class="jbutton">APPLY</button></a>
-            <a href="Jobs.php?save=<?php echo $row['id']; ?>"><button class="jbutton">SAVE</button></a>
+            
         </div>
         <?php
         }
@@ -77,7 +76,7 @@ include("includes/nav.php");
         })
     </script> -->
 
-
+<div style="height: 300px;"></div>
 
 <?php include("includes/footer.php");
     ?>  
