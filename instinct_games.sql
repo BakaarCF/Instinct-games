@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2021 at 02:18 AM
+-- Generation Time: Jun 22, 2021 at 05:49 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -74,12 +74,7 @@ CREATE TABLE `contact_us` (
 --
 
 INSERT INTO `contact_us` (`Id`, `email`, `subject`, `message`) VALUES
-(3, ' karim4995@hotmail.com', ' asd', 'asdasd'),
-(4, ' tedxmiuit@gmail.com', ' asd', 'ASDSAD'),
-(5, ' karim4995@hotmail.com', ' asd', 'asd'),
-(6, ' Amrkhaled6@hotmail.com', ' asd', 'asd'),
-(7, ' Amrkhaled6@hotmail.com', ' asd', 'asdasd'),
-(8, ' mohamed@gmail.com', ' asd', 'AMAMAMMAMAMAMAM');
+(3, ' karim4995@hotmail.com', ' asd', 'asdasd');
 
 -- --------------------------------------------------------
 
@@ -149,8 +144,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `page_name`, `game_desc`, `category`, `requirments`, `multiplayer`, `visual_effects`, `game_play`, `video_link`, `release_date`) VALUES
-(1, 'Ark: Survival Evolved', 'Ark: Survival Evolved (stylized as ΛRK) is a 2017 action-adventure survival video game. In the game, players must survive being stranded on an island filled with roaming dinosaurs and other prehistoric animals, natural hazards, and potentially hostile human players.As a man or woman stranded naked, freezing starving on a mysterious island, you must hunt, harvest, craft items, grow crops, build shelters to survive. Use skill and cunning to kill or tame ride the Dinosaurs primeval creatures roaming the land, team up with hundreds of players or play locally!. The game has both single-player and multiplayer options. Multiplayer allows the option to form tribes of members in a server. Co-developed by Studio Wildcard, Efecto Studio, and Virtual Basement.', 'Vertical Shooter', 'Intel Core i5-2400/AMD FX-8320 or better, 8 GB RAM, NVIDIA GTX 670 2GB/AMD Radeon HD 7870 2GB or better, Version 10, 60 GB', 'Games Controller System', 'Operating System', 'Ark: Survival Evolved is an action-adventure survival game.Set in an open world environment with a dynamic day-night cycle and played either from a third-person or first-person perspective. To survive, players must establish a base, with a fire and weapons;additional activities, such as taming and feeding dinosaurs, require more resources. The game\'s world, known as the Ark, is approximately 48 km2 in size: there is approximately 36 km2 of land with 12 km2 of ocean.There are currently 176 creatures that populate the world of Ark. In the early versions of the game, nearly all creatures were real dinosaurs and other prehistoric creatures, however, as the storyline progressed.', 'https://www.youtube.com/watch?v=5fIAPcVdZO8', 'August 29, 2017'),
-(57, 'ASD', 'ASD', 'ASD', 'ASD', 'ASD', 'ASD', 'ASDA', 'SD', 'AS');
+(1, 'Ark: Survival Evolved', 'Ark: Survival Evolved (stylized as ΛRK) is a 2017 action-adventure survival video game. In the game, players must survive being stranded on an island filled with roaming dinosaurs and other prehistoric animals, natural hazards, and potentially hostile human players.As a man or woman stranded naked, freezing starving on a mysterious island, you must hunt, harvest, craft items, grow crops, build shelters to survive. Use skill and cunning to kill or tame ride the Dinosaurs primeval creatures roaming the land, team up with hundreds of players or play locally!. The game has both single-player and multiplayer options. Multiplayer allows the option to form tribes of members in a server. Co-developed by Studio Wildcard, Efecto Studio, and Virtual Basement.', 'Vertical Shooter', 'Intel Core i5-2400/AMD FX-8320 or better, 8 GB RAM, NVIDIA GTX 670 2GB/AMD Radeon HD 7870 2GB or better, Version 10, 60 GB', 'Games Controller System', 'Operating System', 'Ark: Survival Evolved is an action-adventure survival game.Set in an open world environment with a dynamic day-night cycle and played either from a third-person or first-person perspective. To survive, players must establish a base, with a fire and weapons;additional activities, such as taming and feeding dinosaurs, require more resources. The game\'s world, known as the Ark, is approximately 48 km2 in size: there is approximately 36 km2 of land with 12 km2 of ocean.There are currently 176 creatures that populate the world of Ark. In the early versions of the game, nearly all creatures were real dinosaurs and other prehistoric creatures, however, as the storyline progressed.', 'https://www.youtube.com/watch?v=5fIAPcVdZO8', 'August 29, 2017');
 
 -- --------------------------------------------------------
 
@@ -203,6 +197,28 @@ INSERT INTO `roles` (`id`, `job`, `location`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `saved_jobs`
+--
+
+CREATE TABLE `saved_jobs` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `user_id` int(11) UNSIGNED NOT NULL,
+  `role_id` int(11) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `saved_jobs`
+--
+
+INSERT INTO `saved_jobs` (`id`, `user_id`, `role_id`) VALUES
+(2, 4, 1),
+(3, 4, 1),
+(4, 5, 1),
+(5, 4, 4);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -213,16 +229,18 @@ CREATE TABLE `users` (
   `email` text NOT NULL,
   `password` text NOT NULL,
   `phone` text NOT NULL,
-  `image` text NOT NULL
+  `image` text NOT NULL,
+  `type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_name`, `name`, `email`, `password`, `phone`, `image`) VALUES
-(1, 'amrkhaled', 'Amr khaled        ', 'Amrkhaled6@hotmail.com', '123', '+01020324406', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg'),
-(4, 'amr', 'amr ', 'Amrkhaled6@hotmail.com', '123', '01020324065', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg');
+INSERT INTO `users` (`id`, `user_name`, `name`, `email`, `password`, `phone`, `image`, `type`) VALUES
+(1, 'amrkhaled', 'Amr khaled        ', 'Amrkhaled6@hotmail.com', '123', '+01020324406', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg', 0),
+(4, 'amr', 'amr ', 'Amrkhaled6@hotmail.com', '123', '01020324065', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg', 0),
+(5, 'Admin1', 'amr', 'tedxmiuit@gmail.com', '123', '01020324406', '', 1);
 
 --
 -- Indexes for dumped tables
@@ -272,6 +290,14 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `saved_jobs`
+--
+ALTER TABLE `saved_jobs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -309,13 +335,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 
 --
 -- AUTO_INCREMENT for table `page_images`
 --
 ALTER TABLE `page_images`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -324,10 +350,16 @@ ALTER TABLE `roles`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `saved_jobs`
+--
+ALTER TABLE `saved_jobs`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
@@ -338,6 +370,13 @@ ALTER TABLE `users`
 --
 ALTER TABLE `page_images`
   ADD CONSTRAINT `page_images_ibfk_1` FOREIGN KEY (`page_id`) REFERENCES `pages` (`id`);
+
+--
+-- Constraints for table `saved_jobs`
+--
+ALTER TABLE `saved_jobs`
+  ADD CONSTRAINT `saved_jobs_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `saved_jobs_ibfk_2` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
