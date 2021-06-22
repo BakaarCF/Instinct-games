@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 17, 2021 at 03:21 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.0
+-- Generation Time: Jun 22, 2021 at 02:18 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -63,11 +63,67 @@ INSERT INTO `applied_jobs` (`id`, `user_id`, `resume`, `title`, `company`, `expe
 --
 
 CREATE TABLE `contact_us` (
-  `Id` int(11) NOT NULL,
+  `Id` int(11) UNSIGNED NOT NULL,
   `email` varchar(250) NOT NULL,
   `subject` text NOT NULL,
   `message` varchar(2500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact_us`
+--
+
+INSERT INTO `contact_us` (`Id`, `email`, `subject`, `message`) VALUES
+(3, ' karim4995@hotmail.com', ' asd', 'asdasd'),
+(4, ' tedxmiuit@gmail.com', ' asd', 'ASDSAD'),
+(5, ' karim4995@hotmail.com', ' asd', 'asd'),
+(6, ' Amrkhaled6@hotmail.com', ' asd', 'asd'),
+(7, ' Amrkhaled6@hotmail.com', ' asd', 'asdasd'),
+(8, ' mohamed@gmail.com', ' asd', 'AMAMAMMAMAMAMAM');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `leaderboard`
+--
+
+CREATE TABLE `leaderboard` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `platformss` varchar(255) NOT NULL,
+  `links` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `leaderboard`
+--
+
+INSERT INTO `leaderboard` (`id`, `platformss`, `links`) VALUES
+(1, 'Facebook', 'https://www.facebook.com/InstinctGames/'),
+(2, 'LinkedIn', 'https://www.linkedin.com/company/instinct-games'),
+(5, 'Twitter', 'https://twitter.com/instinctgames');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `news`
+--
+
+CREATE TABLE `news` (
+  `name` varchar(20) NOT NULL,
+  `descripton` varchar(100) NOT NULL,
+  `img` varchar(50) NOT NULL,
+  `id` int(11) NOT NULL,
+  `link` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `news`
+--
+
+INSERT INTO `news` (`name`, `descripton`, `img`, `id`, `link`) VALUES
+('Atlas', 'A massively multiplayer first-and-third-person fantasy pirate adventure. ATLAS will host up to 40,00', 'layouts/img/Atlas9.jpg', 1, 'https://www.youtube.com/watch?v=miwYMiEUYiA'),
+('Away: The Survival S', 'Sneak past predators, hunt down your prey, and glide among the trees, all while a narrator describes', 'layouts/img/HomeNews2.jpg', 2, 'https://www.youtube.com/watch?v=xGYbtvKcjmQ'),
+('ARK SURVIVAL EVOLVED', 'As a man or woman stranded naked, freezing & starving on a mysterious island, you must hunt, harvest', 'layouts/img/ArkNews.jpg', 7, 'https://www.youtube.com/watch?v=FW9vsrPWujI');
 
 -- --------------------------------------------------------
 
@@ -94,7 +150,7 @@ CREATE TABLE `pages` (
 
 INSERT INTO `pages` (`id`, `page_name`, `game_desc`, `category`, `requirments`, `multiplayer`, `visual_effects`, `game_play`, `video_link`, `release_date`) VALUES
 (1, 'Ark: Survival Evolved', 'Ark: Survival Evolved (stylized as ΛRK) is a 2017 action-adventure survival video game. In the game, players must survive being stranded on an island filled with roaming dinosaurs and other prehistoric animals, natural hazards, and potentially hostile human players.As a man or woman stranded naked, freezing starving on a mysterious island, you must hunt, harvest, craft items, grow crops, build shelters to survive. Use skill and cunning to kill or tame ride the Dinosaurs primeval creatures roaming the land, team up with hundreds of players or play locally!. The game has both single-player and multiplayer options. Multiplayer allows the option to form tribes of members in a server. Co-developed by Studio Wildcard, Efecto Studio, and Virtual Basement.', 'Vertical Shooter', 'Intel Core i5-2400/AMD FX-8320 or better, 8 GB RAM, NVIDIA GTX 670 2GB/AMD Radeon HD 7870 2GB or better, Version 10, 60 GB', 'Games Controller System', 'Operating System', 'Ark: Survival Evolved is an action-adventure survival game.Set in an open world environment with a dynamic day-night cycle and played either from a third-person or first-person perspective. To survive, players must establish a base, with a fire and weapons;additional activities, such as taming and feeding dinosaurs, require more resources. The game\'s world, known as the Ark, is approximately 48 km2 in size: there is approximately 36 km2 of land with 12 km2 of ocean.There are currently 176 creatures that populate the world of Ark. In the early versions of the game, nearly all creatures were real dinosaurs and other prehistoric creatures, however, as the storyline progressed.', 'https://www.youtube.com/watch?v=5fIAPcVdZO8', 'August 29, 2017'),
-(3, 'ATLAS', 'A massively multiplayer first-and-third-person fantasy pirate adventure. Start small then expand your spheres of influence from a small island, up to an unstoppable pirate empire that spans across the oceans. Wage battle against enemy fleets as you singlehandedly can command large ships of war using the captaining system, or take control of any weapon directly with your own character. Dive deep into the briny water to explore permanent sunken wrecks and recover salvage, unearth the loot from procedurally-generated Treasure Maps and challenge zones, or complete challenging main questlines. Team up with other aspiring adventurers and sail into the vast ocean to discover new lands rich with region-specific elements, tame exotic natural and mythical creatures, raid forgotten tombs, confront powerful ancient gods and even build and administer your own colonies, cities, and civilizations to dominate the ATLAS in this ultimate quest for fortune and glory!.Co-developed by Grapeshot Games.', 'Vertical Shooter', 'Intel Core i5-2400/AMD FX-8320 or better, 4 GB RAM, NVIDIA GTX 770 2GB/AMD Radeon HD 7870 2GB or better, 120 GB', 'Games Controller System', 'Operating System', 'ATLAS will host up to 40,000 players exploring the same Globe simultaneously, with an unprecedented scale of cooperation and conflict! Stake your claim in this endless open world as you conquer territory, construct ships, search for buried treasure, assemble forts, plunder settlements and hire crew to join your powerful growing armada. Start small then expand your spheres of influence from a small island, up to an unstoppable pirate empire that spans across the oceans. Wage battle against enemy fleets as you singlehandedly command large ships of war using the captaining system.', 'https://www.youtube.com/watch?v=miwYMiEUYiA', 'December 22, 2018');
+(57, 'ASD', 'ASD', 'ASD', 'ASD', 'ASD', 'ASD', 'ASDA', 'SD', 'AS');
 
 -- --------------------------------------------------------
 
@@ -141,7 +197,8 @@ INSERT INTO `roles` (`id`, `job`, `location`) VALUES
 (2, 'Python Developer', 'Cario, Egypt'),
 (3, 'Game Designer', 'Cario, Egypt'),
 (4, 'UX Designer', 'Cairo, Egypt'),
-(5, 'UI Designer', 'Cairo, Egypt.');
+(5, 'UI Designer', 'Cairo, Egypt.'),
+(8, 'Game Tester', 'Cairo, Egypt');
 
 -- --------------------------------------------------------
 
@@ -164,9 +221,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `name`, `email`, `password`, `phone`, `image`) VALUES
-(1, '18204204', 'Amr khaled', 'Amrkhaled6@hotmail.com', '123', '+01020324406', 'Web_Photo_Editor.jpg'),
-(2, '', '', '', '', '', ''),
-(3, 'OmarHafez', 'OmarHafez ', 'Omar@gmail.com', '123', '01022767470', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg');
+(1, 'amrkhaled', 'Amr khaled        ', 'Amrkhaled6@hotmail.com', '123', '+01020324406', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg'),
+(4, 'amr', 'amr ', 'Amrkhaled6@hotmail.com', '123', '01020324065', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg');
 
 --
 -- Indexes for dumped tables
@@ -176,6 +232,24 @@ INSERT INTO `users` (`id`, `user_name`, `name`, `email`, `password`, `phone`, `i
 -- Indexes for table `applied_jobs`
 --
 ALTER TABLE `applied_jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `leaderboard`
+--
+ALTER TABLE `leaderboard`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `news`
+--
+ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -214,28 +288,46 @@ ALTER TABLE `applied_jobs`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `contact_us`
+--
+ALTER TABLE `contact_us`
+  MODIFY `Id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `leaderboard`
+--
+ALTER TABLE `leaderboard`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `page_images`
 --
 ALTER TABLE `page_images`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

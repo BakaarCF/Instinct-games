@@ -53,36 +53,11 @@ include("includes/nav.php");
             <button class="jbutton">APPLY</button>
         </div> -->
     </div>
-<!-- 
-    <div class="jrow">
-        <div class="jcards">
-            <h3><a href="#">Game designer</a></h3>
-            <p><i class="fas fa-map-marker-alt"></i>     Cairo, Egypt</p>
-            <button class="jbutton" >APPLY</button>
-        </div>
-        <div class="jcards">
-            <h3><a href="#">Game designer</a></h3>
-            <p><i class="fas fa-map-marker-alt"></i>     Cairo, Egypt</p>
-            <button class="jbutton">APPLY</button>
-        </div>
-    </div>
 
-    <div class="jrow">
-        <div class="jcards">
-            <h3><a href="#">Game designer</a></h3>
-            <p><i class="fas fa-map-marker-alt"></i>     Cairo, Egypt</p>
-            <button class="jbutton">APPLY</button>
-        </div>
-        <div class="jcards">
-            <h3><a href="#">Game designer</a></h3>
-            <p><i class="fas fa-map-marker-alt"></i>     Cairo, Egypt</p>
-            <button class="jbutton">APPLY</button>
-        </div>
-    </div>                 -->
 </div>
-<div class="view-more-container">
+<!-- <div class="view-more-container">
     <button class="view-more-button">VIEW MORE</button>
-</div>
+</div> -->
 <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
         $(".jcards").slice(0, 2).show()
