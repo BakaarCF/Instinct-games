@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2021 at 05:49 AM
+-- Generation Time: Jun 22, 2021 at 08:00 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -52,9 +52,7 @@ CREATE TABLE `applied_jobs` (
 
 INSERT INTO `applied_jobs` (`id`, `user_id`, `resume`, `title`, `company`, `exper_description`, `exper_from`, `exper_to`, `institution`, `major`, `degree`, `educ_description`, `educ_from`, `educ_to`, `message`, `role_id`) VALUES
 (1, 1, '', 'a', 'a ', 'a', '2021-06-18', '2021-06-24', 'a', 'as', 'asdasd', '2021-06-11', '2021-06-15', '0000-00-00', '', 2),
-(2, 1, 'code-snapshot.png', 'fbpp', 'Osteo Egypt ', 'asa', '2021-06-01', '2021-06-12', 'a', 'as', 'sasas', '2021-06-18', '2021-06-30', '0000-00-00', '', 2),
-(3, 1, '', '', ' ', '', '0000-00-00', '0000-00-00', '', '', '', '2021-06-18', '2021-06-08', '0000-00-00', '', 4),
-(4, 1, 'register_bg_2.png', 'Assignment 1', 'Osteo Egypt ', 'saddd', '2021-06-09', '2021-06-25', 'a', 'as', 'asss', 'dasdasd', '2021-06-15', '2021-06-23', 'asdsadsadds', 5);
+(2, 1, 'code-snapshot.png', 'fbpp', 'Osteo Egypt ', 'asa', '2021-06-01', '2021-06-12', 'a', 'as', 'sasas', '2021-06-18', '2021-06-30', '0000-00-00', '', 2);
 
 -- --------------------------------------------------------
 
@@ -191,8 +189,7 @@ INSERT INTO `roles` (`id`, `job`, `location`) VALUES
 (2, 'Python Developer', 'Cario, Egypt'),
 (3, 'Game Designer', 'Cario, Egypt'),
 (4, 'UX Designer', 'Cairo, Egypt'),
-(5, 'UI Designer', 'Cairo, Egypt.'),
-(8, 'Game Tester', 'Cairo, Egypt');
+(5, 'UI Designer', 'Cairo, Egypt.');
 
 -- --------------------------------------------------------
 
@@ -214,7 +211,9 @@ INSERT INTO `saved_jobs` (`id`, `user_id`, `role_id`) VALUES
 (2, 4, 1),
 (3, 4, 1),
 (4, 5, 1),
-(5, 4, 4);
+(5, 4, 4),
+(6, 4, 2),
+(7, 6, 2);
 
 -- --------------------------------------------------------
 
@@ -238,9 +237,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `name`, `email`, `password`, `phone`, `image`, `type`) VALUES
-(1, 'amrkhaled', 'Amr khaled        ', 'Amrkhaled6@hotmail.com', '123', '+01020324406', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg', 0),
 (4, 'amr', 'amr ', 'Amrkhaled6@hotmail.com', '123', '01020324065', 'WhatsApp Image 2020-11-19 at 3.07.20 PM.jpeg', 0),
-(5, 'Admin1', 'amr', 'tedxmiuit@gmail.com', '123', '01020324406', '', 1);
+(5, 'Admin1', 'amr', 'tedxmiuit@gmail.com', '123', '01020324406', '', 1),
+(6, 'BakaarCF', 'BakaarCF', 'amr@at.com', '123', '01020224406', '', 0);
 
 --
 -- Indexes for dumped tables
@@ -353,13 +352,13 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `saved_jobs`
 --
 ALTER TABLE `saved_jobs`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

@@ -1,3 +1,17 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "instinct_games";
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+if(isset($_GET['delete'])) {
+    $jobb_id = $_GET['delete'];
+
+    $sql = "DELETE FROM roles WHERE id='$jobb_id'";
+    mysqli_query($conn,$sql);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,6 +70,9 @@
                         <a class="collapse-item" href="add-game.php">Add-Game</a>
                         <a class="collapse-item" href="add-news.php">Add-News</a>
                         <a class="collapse-item" href="contact_us.php">Contact-Us</a>
+                        <a class="collapse-item" href="viewjobs.php">View Jobs</a>
+                        <a class="collapse-item" href="viewusers.php">View Users</a>
+                        <a class="collapse-item" href="viewappliedjobs.php">View AppliedJobs</a>
                         
                     </div>
                 </div>
@@ -124,7 +141,8 @@
   
             <th>Job Id</th>  
             <th>Job name</th> 
-            <th>location</th> 
+            <th>location</th>
+            <th>Actions</th> 
             
         </tr>  
         </thead>  
@@ -154,7 +172,11 @@
 <!--here showing results in the table -->  
             <td><?php echo $job_id;  ?></td>  
             <td><?php echo $job_name;  ?></td>
-            <td><?php echo $loc;  ?></td>    
+            <td><?php echo $loc;  ?></td>
+            <td><div class="form-group">
+													
+                <input type="button" onclick="window.location='viewjobs.php?delete=<?php echo $job_id; ?>'" name="addd" class="form-control btn btn-block btn-primary btn-sm" placeholder="" value="Mark As Viewed">
+            </div></td>    
         </tr>  
   
         <?php } ?>  
@@ -169,7 +191,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>Instinct-Games</span>
                     </div>
                 </div>
             </footer>

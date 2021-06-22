@@ -42,7 +42,7 @@ if(isset($_GET['delete'])) {
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-info sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-info  sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="add-game.php">
@@ -70,6 +70,9 @@ if(isset($_GET['delete'])) {
                         <a class="collapse-item" href="add-game.php">Add-Game</a>
                         <a class="collapse-item" href="add-news.php">Add-News</a>
                         <a class="collapse-item" href="contact_us.php">Contact-Us</a>
+                        <a class="collapse-item" href="viewjobs.php">View Jobs</a>
+                        <a class="collapse-item" href="viewusers.php">View Users</a>
+                        <a class="collapse-item" href="viewappliedjobs.php">View AppliedJobs</a>
                         
                     </div>
                 </div>

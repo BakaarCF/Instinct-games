@@ -130,6 +130,9 @@
                         <a class="collapse-item" href="add-game.php">Add-Game</a>
                         <a class="collapse-item" href="add-news.php">Add-News</a>
                         <a class="collapse-item" href="contact_us.php">Contact-Us</a>
+                        <a class="collapse-item" href="viewjobs.php">View Jobs</a>
+                        <a class="collapse-item" href="viewusers.php">View Users</a>
+                        <a class="collapse-item" href="viewappliedjobs.php">View AppliedJobs</a>
                         
                     </div>
                 </div>
