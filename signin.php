@@ -5,6 +5,10 @@ $username = "root";
 $password = "";
 $dbname = "instinct_games";
 
+if(!empty($_SESSION['user_id'])) {
+    die("Already Logged In");
+}
+
 if(isset($_POST['signin']))
 {
     $conn = mysqli_connect($servername,$username,$password,$dbname);
@@ -21,8 +25,14 @@ if(isset($_POST['signin']))
         if ($row['user_name'] == $uname && $row['password'] == $pass)
         {
             $_SESSION['user_id'] = $row['id'];
+            $_SESSION['user_type'] = $row['type'];
+            if($_SESSION['user_type'] == 1) {
+                header("location: control/add-game.php");
+            } else {
+                header("Location:index.php");
+            }
             echo "<script>alert('Logged In');</script>";
-            header("Location:index.php");
+            
         }
         else
         {

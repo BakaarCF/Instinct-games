@@ -29,11 +29,11 @@
        
         for ($z = 0; $z < $images; $z++) {
             // $filename = rand() . $_FILES['image' . $z]['name'];
-            $filename = $_FILES["images" . $z]["name"];
+            $filename = $_FILES["image" . $z]["name"];
 
             $destination = '../layouts/img/' . $filename;
 
-            $target_file = $destination . basename($_FILES["images" . $z]["name"]);
+            $target_file = $destination . basename($_FILES["image" . $z]["name"]);
 
             
 
@@ -43,15 +43,15 @@
 
             
 
-            $file = $_FILES['images' . $z]['tmp_name'];
-            $size = $_FILES['images' . $z]['size'];
+            $file = $_FILES['image' . $z]['tmp_name'];
+            $size = $_FILES['image' . $z]['size'];
 
-            if ($_FILES['images' . $z]['size'] > 1000000) {
+            if ($_FILES['image' . $z]['size'] > 1000000) {
                 echo '<script>alert("File Too Large")</script>';
             } else {
                 
                 if (move_uploaded_file($file, $destination)) {
-                    $ins = "INSERT INTO `page_images` (`id`, `page_id`, `image`) VALUES (NULL, '$game_id', 'image/$filename')";
+                    $ins = "INSERT INTO `page_images` (`id`, `page_id`, `image`) VALUES (NULL, '$game_id', '$filename')";
                     mysqli_query($conn, $ins);
                 } else {
                     echo '<script>alert("Failed To Upload Image")</script>';
@@ -60,6 +60,7 @@
         }
 
         if (mysqli_query($conn, $sql)) {
+            
             print " <script> alert('Game Added!') </script>";
             header("Location:add-game.php");
 
@@ -264,9 +265,9 @@
                                                 name="release_date" aria-describedby="emailHelp"
                                                 placeholder="Enter Release Date...">
                                         </div> -->
-                                        <a href="add-game.php" >
+                                        <!-- <a href="add-game.php" > -->
                                             <button type="submit" class="btn btn-primary btn-user btn-block" name="add">Add Game </button>
-                                        </a>
+                                        <!-- </a> -->
                                         <hr>
                                     </form>
                                 </div>

@@ -11,7 +11,8 @@
       $sql = "SELECT * FROM pages";
       $rows = mysqli_query($conn,$sql);
 
-      if(!empty($_SESSION['user_id'])) {
+      if(!empty($_SESSION['user_id'])) 
+      {
          $user_id = $_SESSION['user_id'];
          $sql = "SELECT * FROM users WHERE id = '$user_id'";
          $result = mysqli_query($conn, $sql);
@@ -120,14 +121,17 @@
             $rowID = $row['id'];
             $rowName = $row['page_name'];
             $userName = $user['name'];
+
             echo "
             <div class='dropdown-menu' style='margin: 0 auto'>
             <button class='menu-btn'>".$userName."<i class='fas fa-angle-down'></i></button>
             <div class='menu-content'>
+               <a class='links-hidden' styel='color:white' href='SavedJobs.php'>Saved Jobs</a>
                <a class='links-hidden' styel='color:white' href='index.php?signout='>Log Out</a>
             </div>
             </div>
             ";
+
          }
         
         ?>

@@ -31,7 +31,7 @@ class User {
 
         $conn = mysqli_connect($servername,$username,$password,$dbname);
         
-        $sql = "INSERT INTO users (id,user_name,name,email,phone,password) VALUES (NULL,'$usernamee', '$name', '$email','$phone','$passwordd')";
+        $sql = "INSERT INTO users (id,user_name,name,email,phone,password,type) VALUES (NULL,'$usernamee', '$name', '$email','$phone','$passwordd','0')";
         if (mysqli_query($conn, $sql)) {
             header("Location:signin.php");
         } else {
